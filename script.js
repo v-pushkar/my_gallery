@@ -2,6 +2,7 @@ console.log("script is run");
 const paramGall = {
     hover_animation: "scale",
     structure: "oneRow", // "twoRow", "table"
+    struct_cols: 7, // from 1 - 12
     box_order: "equally", // "mix" "equally"
     box_margin: "yes" // "no";
 };
@@ -15,11 +16,16 @@ function createGallery(a) {
     //  structure: "row"/"table", 
     // }
     const param = a;
+    // ------ function - returne classes for gallery box 
+    function classesGalleryBox(param) {
 
+    }
+    // ------ function - returne classes for item- box of gallery
     function checkParam(param) {
         console.log("checkParam is run");
         console.log("param.hover_animation : " + param.hover_animation);
         var classesForBox = "";
+        // ----------------------------------------------
         if (param.hover_animation) {
             console.log("animation - true");
             switch (param.hover_animation) {
@@ -30,6 +36,7 @@ function createGallery(a) {
                     classesForBox = classesForBox + 'animation-def ';
             }
         }
+        // ----------------------------------------------
         if (param.box_order) {
             switch (param.box_order) {
                 case "equally":
@@ -42,18 +49,24 @@ function createGallery(a) {
                     classesForBox = classesForBox + 'box-order-def ';
             }
         }
+        // ----------------------------------------------
         if (param.box_margin) {
             switch (param.box_margin) {
                 case "yes":
-                    classesForBox = classesForBox + 'box-margin';
+                    classesForBox = classesForBox + 'box-margin ';
                     break;
                 case "no":
-                    classesForBox = classesForBox + 'box-margin-no';
+                    classesForBox = classesForBox + 'box-margin-no ';
                     break;
                 default:
 
             }
         }
+        // ----------------------------------------------
+        if (param.struct_cols && param.struct_cols <= 12) {
+            galleryBox.classList.add(`cols-${param.struct_cols}`);
+        }
+
         // ------------- return result ------------------
         return classesForBox
     }

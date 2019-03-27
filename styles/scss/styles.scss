@@ -22,9 +22,15 @@ body {
     }
   }
 
-  .img-wrapp {
+  .gallery-box {
     position: relative;
-    display: inline-block;
+    display: -webkit-flex;
+    display: flex;
+
+    .item-Wrapp {
+      display: -webkit-inline-flex;
+      display: inline-flex;
+    }
 
     .img-box {
       border: 5px solid white;
@@ -33,8 +39,8 @@ body {
       -webkit-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
       box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
-      position: absolute;
-      display: inline-block;
+      // position: absolute;
+      // display: inline-block;
       overflow: hidden;
 
       img {
@@ -47,21 +53,8 @@ body {
         transform: rotate(0deg)
       }
 
-      &.img-position-top {
-        top: 20px;
-      }
-
-      &.img-position-down {
-        top: 50px;
-      }
-
-      &.img-position-centrer {
-        top: 0;
-        transform: scale(1.2);
-      }
-
       &.animation-scale {
-        opacity: 0.6;
+        // opacity: 0.6;
         transition: all 0.5s;
 
         &:hover {
@@ -76,68 +69,7 @@ body {
 
       }
 
-      &.img-position-0 {
-        display: none;
-      }
 
-      &.img-position-1 {
-        opacity: 0.6;
-        z-index: 1;
-        left: 50px;
-        transform: rotate(-2deg);
-      }
-
-      &.img-position-2 {
-        opacity: 0.7;
-        z-index: 2;
-        left: 200px;
-        transform: rotate(-3deg);
-      }
-
-      &.img-position-3 {
-        opacity: 0.8;
-        z-index: 3;
-        left: 300px;
-      }
-
-      &.img-position-4 {
-        opacity: 0.85;
-        z-index: 4;
-        left: 400px;
-        transform: rotate(3deg);
-        //                transition: opacity 0.5s;
-        //                -webkit-transition: opacity 0.5s;
-      }
-
-      &.img-position-5 {
-        z-index: 5;
-        left: 500px;
-      }
-
-      &.img-position-6 {
-        z-index: 4;
-        left: 600px;
-      }
-
-      &.img-position-7 {
-        z-index: 3;
-        left: 700px;
-      }
-
-      &.img-position-8 {
-        z-index: 2;
-        left: 800px;
-      }
-
-      &.img-position-9 {
-        z-index: 1;
-        left: 900px;
-      }
-
-      &.img-position-10 {
-        z-index: 0;
-        left: 1000px;
-      }
     }
   }
 }
