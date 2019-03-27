@@ -1,0 +1,225 @@
+body {
+  margin: 0
+}
+
+.gallery-wrapp {
+  .gallery-nav-wrapp {
+    margin: 15px 0px;
+    padding: 5px;
+
+    .gallery-naw {
+      text-align: center;
+
+      button {
+        border: none;
+        padding: 5px;
+        width: 100px;
+        text-transform: uppercase;
+        background-color: darkslategrey;
+        color: antiquewhite;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .img-wrapp {
+    position: relative;
+    display: inline-block;
+
+    .img-box {
+      border: 5px solid white;
+      height: 15vw;
+      width: 20vw;
+      -webkit-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
+      position: absolute;
+      display: inline-block;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+      }
+
+      &:hover {
+        z-index: 6 !important;
+        opacity: 1 !important;
+        transform: rotate(0deg)
+      }
+
+      &.img-position-top {
+        top: 20px;
+      }
+
+      &.img-position-down {
+        top: 50px;
+      }
+
+      &.img-position-centrer {
+        top: 0;
+        transform: scale(1.2);
+      }
+
+      &.animation-scale {
+        opacity: 0.6;
+        transition: all 0.5s;
+
+        &:hover {
+          -o-transform: scale(1.4);
+          -ms-transform: scale(1.4);
+          -moz-transform: scale(1.4);
+          -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+          opacity: 1;
+
+        }
+
+      }
+
+      &.img-position-0 {
+        display: none;
+      }
+
+      &.img-position-1 {
+        opacity: 0.6;
+        z-index: 1;
+        left: 50px;
+        transform: rotate(-2deg);
+      }
+
+      &.img-position-2 {
+        opacity: 0.7;
+        z-index: 2;
+        left: 200px;
+        transform: rotate(-3deg);
+      }
+
+      &.img-position-3 {
+        opacity: 0.8;
+        z-index: 3;
+        left: 300px;
+      }
+
+      &.img-position-4 {
+        opacity: 0.85;
+        z-index: 4;
+        left: 400px;
+        transform: rotate(3deg);
+        //                transition: opacity 0.5s;
+        //                -webkit-transition: opacity 0.5s;
+      }
+
+      &.img-position-5 {
+        z-index: 5;
+        left: 500px;
+      }
+
+      &.img-position-6 {
+        z-index: 4;
+        left: 600px;
+      }
+
+      &.img-position-7 {
+        z-index: 3;
+        left: 700px;
+      }
+
+      &.img-position-8 {
+        z-index: 2;
+        left: 800px;
+      }
+
+      &.img-position-9 {
+        z-index: 1;
+        left: 900px;
+      }
+
+      &.img-position-10 {
+        z-index: 0;
+        left: 1000px;
+      }
+    }
+  }
+}
+
+// Base
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+// Absolute Background
+.absolute-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+// Fog
+.fog {
+  position: relative;
+
+  height: 100vh;
+  width: 100%;
+
+  background-color: #000;
+
+  &__container {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+
+    height: 100vh;
+    width: 300vw;
+
+    &--first {
+      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png') repeat-x;
+      background-size: contain;
+      background-position: center;
+      animation: marquee 60s linear infinite;
+    }
+
+    &--second {
+      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png') repeat-x;
+      background-size: contain;
+      background-position: center;
+      animation: marquee 40s linear infinite;
+    }
+  }
+}
+
+// Marquee
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-200vw, 0, 0);
+  }
+}
