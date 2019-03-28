@@ -26,6 +26,9 @@ body {
     position: relative;
     display: -webkit-flex;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     .item-Wrapp {
       display: -webkit-inline-flex;
@@ -34,8 +37,8 @@ body {
 
     .img-box {
       border: 5px solid white;
-      height: 15vw;
-      width: 20vw;
+      // height: 15vw;
+      // width: 20vw;
       -webkit-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
       box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
@@ -65,6 +68,26 @@ body {
           transform: scale(1.4);
           opacity: 1;
 
+        }
+
+        &.transl-to-right {
+          &:hover {
+            -o-transform: translateX(30%) scale(1.4);
+            -ms-transform: translateX(30%) scale(1.4);
+            -moz-transform: translateX(30%) scale(1.4);
+            -webkit-transform: translateX(30%) scale(1.4);
+            transform: translateX(30%) scale(1.4);
+          }
+        }
+
+        &.transl-to-left {
+          &:hover {
+            -o-transform: translateX(-30%) scale(1.4);
+            -ms-transform: translateX(-30%) scale(1.4);
+            -moz-transform: translateX(-30%) scale(1.4);
+            -webkit-transform: translateX(-30%) scale(1.4);
+            transform: translateX(-30%) scale(1.4);
+          }
         }
 
       }

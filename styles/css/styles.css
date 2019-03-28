@@ -41,55 +41,7 @@ body {
   display: inline-flex;
 }
 
-/* line 39, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box.cols-2 .item-Wrapp {
-  width: calc(100vw / 2 - 10px);
-  height: calc(100vw / 2 - 10px);
-}
-
-/* line 46, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box.cols-3 .item-Wrapp {
-  width: calc(100vw / 3 - 7px);
-  height: calc(100vw / 3 - 7px);
-}
-
-/* line 53, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box.cols-4 .item-Wrapp {
-  width: calc(100vw / 4 - 5px);
-  height: calc(100vw / 4 - 5px);
-}
-
-/* line 60, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box.cols-5 .item-Wrapp {
-  width: calc(100vw / 5 - 5px);
-  height: calc(100vw / 5 - 5px);
-}
-
-/* line 67, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box.cols-6 .item-Wrapp {
-  width: calc(100vw / 6 - 4px);
-  height: calc(100vw / 6 - 4px);
-}
-
-/* line 74, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box.cols-7 .item-Wrapp {
-  width: calc(100vw / 7 - 4px);
-  height: calc(100vw / 7 - 4px);
-}
-
-/* line 81, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box.cols-8 .item-Wrapp {
-  width: calc(100vw / 8 - 3px);
-  height: calc(100vw / 8 - 3px);
-}
-
-/* line 88, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box.cols-12 .item-Wrapp {
-  width: calc(100vw / 12 - 3px);
-  height: calc(100vw / 12 - 3px);
-}
-
-/* line 94, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 38, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box {
   border: 5px solid white;
   -webkit-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
@@ -98,24 +50,24 @@ body {
   overflow: hidden;
 }
 
-/* line 105, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 49, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box img {
   height: 100%;
 }
 
-/* line 109, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 53, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box:hover {
   z-index: 6 !important;
   opacity: 1 !important;
   transform: rotate(0deg);
 }
 
-/* line 115, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 59, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale {
   transition: all 0.5s;
 }
 
-/* line 119, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 63, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale:hover {
   -o-transform: scale(1.4);
   -ms-transform: scale(1.4);
@@ -125,24 +77,42 @@ body {
   opacity: 1;
 }
 
-/* line 137, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 74, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+.gallery-wrapp .gallery-box .img-box.animation-scale.transl-to-right:hover {
+  -o-transform: translateX(30%) scale(1.4);
+  -ms-transform: translateX(30%) scale(1.4);
+  -moz-transform: translateX(30%) scale(1.4);
+  -webkit-transform: translateX(30%) scale(1.4);
+  transform: translateX(30%) scale(1.4);
+}
+
+/* line 84, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+.gallery-wrapp .gallery-box .img-box.animation-scale.transl-to-left:hover {
+  -o-transform: translateX(-30%) scale(1.4);
+  -ms-transform: translateX(-30%) scale(1.4);
+  -moz-transform: translateX(-30%) scale(1.4);
+  -webkit-transform: translateX(-30%) scale(1.4);
+  transform: translateX(-30%) scale(1.4);
+}
+
+/* line 101, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 141, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 105, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* line 147, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 111, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 figure {
   margin: 0;
 }
 
-/* line 152, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 116, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .absolute-bg {
   position: absolute;
   top: 0;
@@ -156,7 +126,7 @@ figure {
   overflow: hidden;
 }
 
-/* line 168, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 132, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .fog {
   position: relative;
   height: 100vh;
@@ -164,7 +134,7 @@ figure {
   background-color: #000;
 }
 
-/* line 176, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 140, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .fog__container {
   position: absolute;
   height: 100%;
@@ -172,14 +142,14 @@ figure {
   overflow: hidden;
 }
 
-/* line 185, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 149, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .fog__img {
   position: absolute;
   height: 100vh;
   width: 300vw;
 }
 
-/* line 191, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 155, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .fog__img--first {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png") repeat-x;
   background-size: contain;
@@ -187,7 +157,7 @@ figure {
   animation: marquee 60s linear infinite;
 }
 
-/* line 198, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 162, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .fog__img--second {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png") repeat-x;
   background-size: contain;
