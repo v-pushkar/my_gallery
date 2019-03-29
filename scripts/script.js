@@ -1,74 +1,22 @@
-console.log("script is run");
+import classesGalleryBox from '/scripts/modules/galleryClasses.js';
+import animationClass from '/scripts/modules/animationClass.js';
+
 const paramGall = {
     hover_animation: "scale", // - animation for hover-efect 
     structure: "oneRow", // "twoRow", "table"
-    struct_cols: "10-6-4-2", // from 1 - 12, "auto"
-    box_order: "equally", // "mix" "equally"
-    box_margin: "yes" // "no";
+    struct_cols: "12-10-8-2", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
+    item_order: "equally", // "mix" "equally"
+    item_margin: "yes", // "no" - parameter for margins bettwen items
+    item_form: "square" // "rectangle", "circle" - parameter for item form
 };
 document.onload = createGallery(paramGall);
 
 function createGallery(a) {
-
     // a - array with psrameters for slider:
-
     // ------ function - returne classes for gallery box 
-    function classesGalleryBox(param) {
-        var classesGallBox = "";
-        // ----------------------------------------------
-        if (param.box_order) {
-            switch (param.box_order) {
-                case "equally":
-                    classesGallBox = classesGallBox + 'box-order-equally ';
-                    break;
-                case "mix":
-                    classesGallBox = classesGallBox + 'box-order-mix ';
-                    break;
-                default:
-                    classesGallBox = classesGallBox + 'box-order-def ';
-            }
 
-        }
-        // ----------------------------------------------
-        if (param.box_margin) {
-            switch (param.box_margin) {
-                case "yes":
-                    classesGallBox = classesGallBox + 'box-margin ';
-                    break;
-                case "no":
-                    classesGallBox = classesGallBox + 'box-margin-no ';
-                    break;
-                default:
-
-            }
-        }
-        // ----------------------------------------------
-        // if (param.struct_cols && param.struct_cols <= 12) {
-        //     classesGallBox = classesGallBox + `cols-${param.struct_cols}`;
-        // }
-        return classesGallBox;
-
-    }
     // ------ function - returne classes for item- box of gallery
-    function checkParam(param) {
-        // console.log("checkParam is run");
-        // console.log("param.hover_animation : " + param.hover_animation);
-        var classesForBox = "";
-        // ----------------------------------------------
-        if (param.hover_animation) {
-            console.log("animation - true");
-            switch (param.hover_animation) {
-                case "scale":
-                    classesForBox = classesForBox + 'animation-scale ';
-                    break;
-                default:
-                    classesForBox = classesForBox + 'animation-def ';
-            }
-        }
 
-        // ------------- return result ------------------
-        return classesForBox
-    }
 
     console.log("createGallery is run");
     var galleryBox = document.querySelector('[data-name="gallery-box"]'); // get main box with items
@@ -77,8 +25,8 @@ function createGallery(a) {
     //    gallitems[...].setAttribute('class', `fordel`);
     let gallItemsLeng = gallitems.length; // get number, how mach item elements
 
-    console.log("gallitems: " + gallitems.length);
-    console.log("gall items 4: " + gallitems[4]);
+    // console.log("gallitems: " + gallitems.length);
+    // console.log("gall items 4: " + gallitems[4]);
 
     // const animation1 = 'animation-scale';
     for (var i = 0; i < gallItemsLeng; i++) {
@@ -86,7 +34,7 @@ function createGallery(a) {
         // console.log(`lenght of divs ${i}`);
         // console.log('gallitems[i] :'+gallitems[i]);
         let itemWrapp = document.createElement("div");
-        itemWrapp.setAttribute('class', `item-Wrapp item-id-${i} img-position-${i} img-box ${a ? checkParam(a) : ''}`); // add classes for new element - item of gallery
+        itemWrapp.setAttribute('class', `item-Wrapp item-id-${i} img-position-${i} img-box ${a ? animationClass(a) : ''}`); // add classes for new element - item of gallery
         itemBoxSize(itemWrapp, a.struct_cols);
         // itemWrapp.setAttribute('style', `${widthCompensator(a.struct_cols)}`)
         itemWrapp.appendChild(gallitems[0]);
@@ -97,14 +45,12 @@ function createGallery(a) {
 }
 
 function animationCorrect(el) {
+    // setTimeout(function () {
+
+    // }, 300);
     let xx = document.getElementsByClassName("item-Wrapp");
-    // xx.forEach(function (item, i, xx) {
-    //     if (item.scrollLeft < item.offsetWidth / 3) {
-    //         item.classList.add("mystyle")
-    //     }
-    // });
+    let i;
     for (i = 0; i < xx.length; ++i) {
-        // console.log("xx[i].innerWidth : " + xx[i].offsetWidth)
         let ofsetElLeft = xx[i].offsetLeft;
         let windWidth = window.innerWidth;
         let elWidth = xx[i].offsetWidth;
@@ -113,13 +59,8 @@ function animationCorrect(el) {
             xx[i].classList.add("transl-to-right")
         } else if (((elWidth + ofsetElLeft) <= innerWidth) && ((elWidth + ofsetElLeft) > (innerWidth - elWidth / 3))) {
             xx[i].classList.add(`transl-to-left`);
-            // console.log("-------------------")
-            // console.log("ofsetElLeft : " + ofsetElLeft);
-            // console.log("window.innerWidth : " + window.innerWidth);
-            // console.log("xx[i].offsetWidth : " + i + " ; " + xx[i].offsetWidth);
         }
     }
-
 };
 
 
@@ -130,10 +71,11 @@ function itemBoxSize(el, pr) { // calculation of actual size for item box (adapt
     const sScreen = 400;
 
     const scrennStandarts = [xlScrenn, lScreen, mScreen, sScreen];
+    const defPosition = [8, 6, 3, 2];
 
     // console.log("scrennStandarts : " + scrennStandarts);
 
-    let a = pr == "auto" ? [8, 6, 3, 2] : pr.split('-');
+    let a = (pr == "default" ? defPosition : pr ? pr.split('-') : defPosition);
     // console.log(`lenght of a: ${a.length}`);
 
     // if (a.length == 3) {
@@ -184,7 +126,7 @@ function itemBoxSize(el, pr) { // calculation of actual size for item box (adapt
         } else {
             s = 0;
         }
-        // return `width: calc(100vw / ${c} - ${s}px); height: calc(100vw / ${c} - ${s}px)`;
-        return `flex-basis: ${100 / c}%; max-height: calc(100vw / ${c} - ${s}px)`;
+
+        return `flex-basis: ${100 / c * 1.4}%; max-height: calc(100vw / ${c} - ${s}px)`;
     }
 }
