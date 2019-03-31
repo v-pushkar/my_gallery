@@ -1,8 +1,9 @@
-export default function classesGalleryBox(param) {
-    var classesGallBox = "";
+export default function classesGalleryBox(a) {
+    let classesGallBox = "";
+    let viewCalss = (a.structure == "oneRow" ? "one-row" : "view-table");
     // ----------------------------------------------
-    if (param.item_order) {
-        switch (param.item_order) {
+    if (a.item_order) {
+        switch (a.item_order) {
             case "equally":
                 classesGallBox = classesGallBox + 'box-order-equally ';
                 break;
@@ -12,20 +13,6 @@ export default function classesGalleryBox(param) {
             default:
                 classesGallBox = classesGallBox + 'box-order-def ';
         }
-
     }
-    // ----------------------------------------------
-    if (param.box_margin) {
-        switch (param.box_margin) {
-            case "yes":
-                classesGallBox = classesGallBox + 'box-margin ';
-                break;
-            case "no":
-                classesGallBox = classesGallBox + 'box-margin-no ';
-                break;
-            default:
-
-        }
-    }
-    return classesGallBox;
+    return (classesGallBox + viewCalss);
 }

@@ -24,19 +24,40 @@ body {
 
   .gallery-box {
     position: relative;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+
+
+    &.one-row {
+      width: 100%;
+      overflow: hidden;
+
+      .track-box {
+        width: 800%;
+        overflow: hidden;
+
+      }
+
+    }
+
+    &.view-table {
+      .track-box {
+        flex-wrap: wrap;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+
+        justify-content: flex-start;
+      }
+
+    }
 
     .item-Wrapp {
       display: -webkit-inline-flex;
       display: inline-flex;
+      justify-content: center;
     }
 
     .img-box {
-      border: 5px solid white;
+      //border: 5px solid white;
       // height: 15vw;
       // width: 20vw;
       -webkit-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
