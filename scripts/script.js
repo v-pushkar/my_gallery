@@ -53,7 +53,6 @@ function animationCorrect(el) {
         let ofsetElLeft = xx[i].offsetLeft;
         let windWidth = window.innerWidth;
         let elWidth = xx[i].offsetWidth;
-        console.log("/*/*/*/*/ [[[" + elWidth);
         rowWidth = rowWidth + elWidth;
         if (ofsetElLeft < (xx[i].offsetWidth / 3)) {
             xx[i].classList.add("transl-to-right")
