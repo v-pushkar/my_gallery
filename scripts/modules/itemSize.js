@@ -2,18 +2,18 @@ export default function itemBoxSize(el, pr) { // calculation of actual size for 
     const itemForm = pr.item_form;
     const itemSize = pr.struct_cols;
     const itemMargin = pr.item_margin;
-
+    // screen sizes for big mindl and smsll screens
     const xlScrenn = 1920;
     const lScreen = 1024;
     const mScreen = 800;
     const sScreen = 400;
     const scrennStandarts = [xlScrenn, lScreen, mScreen, sScreen];
-    const defPosition = [8, 6, 3, 2];
+    const defSize = [8, 6, 3, 2]; // number of items per line for default
 
 
-    let a = (itemSize == "default" ? defPosition : itemSize ? itemSize.split('-') : defPosition);
+    let a = (itemSize == "default" ? defSize : itemSize ? itemSize.split('-') : defPosition); // determine the number of items per line
 
-    function screenAdaptation(q) { // check screen width and select actual number of elements in row
+    function screenAdaptation(q) { // check screen width and select actual number of items per line from arrey 
         const screenWidth = window.innerWidth;
         let s;
         if (screenWidth > q[0]) {
@@ -54,10 +54,10 @@ export default function itemBoxSize(el, pr) { // calculation of actual size for 
         }
         // return `flex-basis: ${100 / c * 1}%; ${itemForm == "rectangle" ? "max-" : ""}height: calc(100vw / ${c} - ${s}px)`;
         // return `${itemWidth(itemMargin, c)} ${itemForm == "rectangle" ? "max-" : ""}height: calc(100vw / ${c} - ${itemMargin ? itemMargin*2 : s}px)`;
-        return `${itemWidth(itemMargin, c)} height: calc(100vw / ${c} - ${itemMargin ? itemMargin*2 : s}px)`;
+        return `${itemWidth(itemMargin, c)} height: calc(100vw / ${c} - ${itemMargin ? itemMargin*2 : s}px ${itemForm == "rectangle" ? "-20%" : ""})`;
     }
 
-    function itemWidth(a, b) {
+    function itemWidth(a, b) { // returne style with item width. a - margin of item, number of items per row
         let mrg;
         mrg = (a ? `margin:${a}px;` : "");
         let width;
@@ -65,8 +65,4 @@ export default function itemBoxSize(el, pr) { // calculation of actual size for 
         let stl = mrg + " " + width;
         return stl;
     }
-}
-
-function itemWidth(a) {
-
 }

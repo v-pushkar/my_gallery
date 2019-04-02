@@ -6,8 +6,8 @@ import oneRow from '/scripts/modules/oneRow.js';
 
 const paramGall = {
     hover_animation: "scale", // - animation for hover-efect 
-    structure: "oneRow", // "oneRow", "table"
-    struct_cols: "14-8-8-2", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
+    structure: "otable", // "oneRow", "table"
+    struct_cols: "14-6-4-2", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
     item_order: "equally", // "mix" "equally"
     item_margin: 0, // "no" - parameter for margins bettwen items
     item_form: "rectangle", // "rectangle", "circle", "square" - parameter for item form
@@ -42,10 +42,10 @@ function createGallery(a) {
     }
     galleryBox.appendChild(trackBox);
 
-    animationCorrect(gallitems);
+    animationCorrect(gallitems, a.structure);
 };
 
-function animationCorrect(el) {
+function animationCorrect(el, b) {
     let xx = document.getElementsByClassName("item-Wrapp");
     let rowWidth = 0;
     let i;
@@ -60,5 +60,7 @@ function animationCorrect(el) {
             xx[i].classList.add(`transl-to-left`);
         }
     }
-    oneRow(rowWidth);
+    if (b.structure == "oneRow") {
+        oneRow(rowWidth);
+    }
 };

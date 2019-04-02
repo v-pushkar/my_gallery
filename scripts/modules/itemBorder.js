@@ -4,10 +4,11 @@ export default function itemBorder(a) {
     let windth = a[0].windth;
     let radius = a.radius;
     let classStyle = `border: ${windth}px solid ${color};`;
-    var node = document.createElement("style"); // Create a <li> node
+    console.log("classStyle : " + classStyle);
+    var node = document.createElement("style");
     var textnode = document.createTextNode(`.img-box {${classStyle}}`); // Create a text node
-    node.appendChild(textnode); // Append the text to <li>
+    node.appendChild(textnode);
     document.body.appendChild(node);
 
-    return;
+
 }

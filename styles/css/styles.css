@@ -68,7 +68,7 @@ body {
 
 /* line 70, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box img {
-  height: 100%;
+  width: 100%;
 }
 
 /* line 75, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
