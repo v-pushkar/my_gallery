@@ -9,8 +9,8 @@ const paramGall = {
     structure: "otable", // "oneRow", "table"
     struct_cols: "14-6-4-2", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
     item_order: "equally", // "mix" "equally"
-    item_margin: 0, // "no" - parameter for margins bettwen items
-    item_form: "rectangle", // "rectangle", "circle", "square" - parameter for item form
+    item_margin: 20, // "no" - parameter for margins bettwen items
+    item_form: "square", // "rectangle", "circle", "square" - parameter for item form
     item_border: [{
         color: "white",
         windth: 5, // just number

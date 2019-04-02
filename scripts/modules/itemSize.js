@@ -12,6 +12,7 @@ export default function itemBoxSize(el, pr) { // calculation of actual size for 
 
 
     let a = (itemSize == "default" ? defSize : itemSize ? itemSize.split('-') : defPosition); // determine the number of items per line
+    let itemWidth;
 
     function screenAdaptation(q) { // check screen width and select actual number of items per line from arrey 
         const screenWidth = window.innerWidth;
@@ -52,17 +53,33 @@ export default function itemBoxSize(el, pr) { // calculation of actual size for 
         } else {
             s = 0;
         }
-        // return `flex-basis: ${100 / c * 1}%; ${itemForm == "rectangle" ? "max-" : ""}height: calc(100vw / ${c} - ${s}px)`;
-        // return `${itemWidth(itemMargin, c)} ${itemForm == "rectangle" ? "max-" : ""}height: calc(100vw / ${c} - ${itemMargin ? itemMargin*2 : s}px)`;
-        return `${itemWidth(itemMargin, c)} height: calc(100vw / ${c} - ${itemMargin ? itemMargin*2 : s}px ${itemForm == "rectangle" ? "-20%" : ""})`;
+        return `${itemsMargin(itemMargin)} ${itemsWidth(itemMargin, c)} ${itemsHeigth(itemMargin, itemWidth, s)}`;
     }
 
-    function itemWidth(a, b) { // returne style with item width. a - margin of item, number of items per row
+    function itemsMargin(a) {
         let mrg;
         mrg = (a ? `margin:${a}px;` : "");
+        return mrg;
+    }
+
+    function itemsWidth(a, b) { // returne style with item width. a - margin of item, number of items per row
+
         let width;
-        width = `${pr.structure == "oneRow" ? 'width:' : 'flex-basis:' } calc( ${100 / b}${pr.structure == "oneRow" ? "vw" : "%"}${a ? ` - ${a*2}px`: ""} );`;
-        let stl = mrg + " " + width;
-        return stl;
+        let styleW;
+        width = (100 / b).toFixed(4);
+        itemWidth = width;
+        styleW = `${pr.structure == "oneRow" ? 'width:' : 'flex-basis:' } calc( ${width}${pr.structure == "oneRow" ? "vw" : "%"}${a ? ` - ${a*2}px`: ""} );`;
+        console.log("**** :" + styleW);
+        return styleW;
+    }
+
+    function itemsHeigth(a, b, c) { // returne style with item height. a - margin of item, number of items per row
+        let itemHeigth;
+        if (itemForm == "rectangle") {
+            itemHeigth = `height: ${b * 0.7}vw`;
+        } else {
+            itemHeigth = `height: calc(${b}vw - ${a ? a*2:c}px)`;
+        }
+        return itemHeigth;
     }
 }
