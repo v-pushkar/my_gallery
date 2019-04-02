@@ -1,2 +1,2 @@
-.gallery-box - main box for gallery;
+Script for create blocks
 

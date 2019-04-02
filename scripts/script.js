@@ -4,7 +4,7 @@ import itemBoxSize from '/scripts/modules/itemSize.js';
 import itemBorder from '/scripts/modules/itemBorder.js';
 import oneRow from '/scripts/modules/oneRow.js';
 
-// options for view gallery
+// options for view gallery 
 const paramGall = {
     hover_animation: "scale", // - animation for hover-efect 
     structure: "otable", // "oneRow", "table"
