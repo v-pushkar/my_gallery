@@ -4,6 +4,7 @@ import itemBoxSize from '/scripts/modules/itemSize.js';
 import itemBorder from '/scripts/modules/itemBorder.js';
 import oneRow from '/scripts/modules/oneRow.js';
 
+// options for view gallery
 const paramGall = {
     hover_animation: "scale", // - animation for hover-efect 
     structure: "otable", // "oneRow", "table"
@@ -16,8 +17,8 @@ const paramGall = {
         windth: 5, // just number
         radius: 20, // just number
     }],
-
 };
+
 document.onload = createGallery(paramGall);
 
 itemBorder(paramGall.item_border);
