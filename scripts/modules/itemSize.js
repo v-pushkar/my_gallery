@@ -69,7 +69,7 @@ export default function itemBoxSize(pr) { // calculation of actual size for item
         width = (100 / b).toFixed(4);
         itemWidth = width;
         styleW = `${pr.structure == "oneRow" ? 'width:' : 'flex-basis:' } calc( ${width}${pr.structure == "oneRow" ? "vw" : "%"}${a ? ` - ${a*2}px`: ""} );`;
-        console.log("**** :" + styleW);
+        // console.log("**** :" + styleW);
         return styleW;
     }
 

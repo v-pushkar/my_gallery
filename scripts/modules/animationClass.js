@@ -1,9 +1,9 @@
-export default function animationClass(param) {
+export default function animationClass(a) {
 
     var classesForBox = "";
     // ----------------------------------------------
-    if (param.hover_animation) {
-        switch (param.hover_animation) {
+    if (a) {
+        switch (a) {
             case "scale":
                 classesForBox = classesForBox + 'animation-scale ';
                 break;

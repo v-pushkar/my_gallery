@@ -3,7 +3,7 @@ import animationClass from '/scripts/modules/animationClass.js';
 import itemBoxSize from '/scripts/modules/itemSize.js';
 import itemBorder from '/scripts/modules/itemBorder.js';
 import oneRow from '/scripts/modules/oneRow.js';
-// import itemsWrapper from '/scripts/modules/itemsWrapper';
+import itemsWrapper from '/scripts/modules/itemsWrapper.js';
 
 // options for view gallery 
 const g_options = {
@@ -13,11 +13,11 @@ const g_options = {
     trackBox_teg: "div",
     item_wrappteg: "div",
     item_order: "equally", // "mix" "equally"
-    item_margin: 20, // "no" - parameter for margins bettwen items
+    item_margin: 5, // "no" - parameter for margins bettwen items
     item_form: "square", // "rectangle", "circle", "square" - parameter for item form
     item_border: [{
-        color: "white",
-        windth: 25, // just number
+        color: "#777777",
+        windth: 10, // just number
         radius: 20, // just number
     }],
 };
@@ -25,35 +25,18 @@ const g_options = {
 document.onload = createGallery(g_options);
 
 itemBorder(g_options.item_border);
-// ------------------------ wrapper function / start -------------------
 
-// ---||||
-// itemsWrapper(g_options.struct_cols, g_options.item_wrappteg, g_options. trackBox_teg);
-// ---||||
 function createGallery(a) {
     // a - array with psrameters for slider:
     var galleryBox = document.querySelector('[data-name="gallery-box"]'); // get main box with items
     galleryBox.setAttribute('class', `gallery-box ${classesGalleryBox(a)}`); // add class to main box
     let gallitems = galleryBox.getElementsByTagName('*'); // select ol child/items 
 
-    let gallItemsLeng = gallitems.length; // get number, how mach item elements;
-    let trackBox = document.createElement("div");
-    trackBox.setAttribute('class', `track-box`);
-    trackBox.setAttribute('id', 'track-box');
 
-    for (var i = 0; i < gallItemsLeng; i++) {
-        let itemWrapp = document.createElement("div");
-        itemWrapp.setAttribute('class', `item-Wrapp item-id-${i} img-position-${i} img-box ${a ? animationClass(a) : ''}`);
-        itemWrapp.setAttribute('style', itemBoxSize(a));
-        itemWrapp.appendChild(gallitems[0]);
-        trackBox.appendChild(itemWrapp);
-    }
-    galleryBox.appendChild(trackBox);
+    galleryBox.appendChild(itemsWrapper(gallitems, g_options));
 
     animationCorrect(gallitems, a.structure);
 };
-
-// ------------------------ wrapper function / finish -------------------
 
 function animationCorrect(el, b) {
     let xx = document.getElementsByClassName("item-Wrapp");
