@@ -6,7 +6,7 @@ export default function itemBorder(a) {
     let classStyle = `border: ${windth}px solid ${color};`;
     console.log("classStyle : " + classStyle);
     var node = document.createElement("style");
-    var textnode = document.createTextNode(`.img-box {${classStyle}}`); // Create a text node
+    var textnode = document.createTextNode(`.item-Wrapp {${classStyle}}`); // Create a text node
     node.appendChild(textnode);
     document.body.appendChild(node);
 

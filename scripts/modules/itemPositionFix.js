@@ -1,8 +1,8 @@
 export default function animationCorrect(el) {
 
     let xx = document.getElementsByClassName("item-Wrapp");
-    let i;
-    for (i = 0; i < xx.length; ++i) {
+
+    for (let i = 0; i < xx.length; ++i) {
         let ofsetElLeft = xx[i].offsetLeft;
         let windWidth = window.innerWidth;
         let elWidth = xx[i].offsetWidth;

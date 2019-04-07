@@ -1,4 +1,4 @@
-export default function itemBoxSize(el, pr) { // calculation of actual size for item box (adaptive)
+export default function itemBoxSize(pr) { // calculation of actual size for item box (adaptive)
     const itemForm = pr.item_form;
     const itemSize = pr.struct_cols;
     const itemMargin = pr.item_margin;
@@ -11,7 +11,7 @@ export default function itemBoxSize(el, pr) { // calculation of actual size for 
     const defSize = [8, 6, 3, 2]; // number of items per line for default
 
 
-    let a = (itemSize == "default" ? defSize : itemSize ? itemSize.split('-') : defPosition); // determine the number of items per line
+    let a = (itemSize == "default" ? defSize : itemSize ? itemSize.split('-') : defSize); // determine the number of items per line
     let itemWidth;
 
     function screenAdaptation(q) { // check screen width and select actual number of items per line from arrey 
@@ -29,7 +29,7 @@ export default function itemBoxSize(el, pr) { // calculation of actual size for 
         return s
     }
 
-    el.setAttribute('style', `${widthCompensator(a[screenAdaptation(scrennStandarts)])};${itemForm == "circle" ? "border-radius:50%" : ""}`);
+    return `${widthCompensator(a[screenAdaptation(scrennStandarts)])};${itemForm == "circle" ? "border-radius:50%" : ""}`;
 
     function widthCompensator(c) { // - create string with styles (width/height) for gallery item
         let s;
