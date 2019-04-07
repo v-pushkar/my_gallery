@@ -30,7 +30,8 @@ function createGallery(a) {
     // a - array with psrameters for slider:
     var galleryBox = document.querySelector('[data-name="gallery-box"]'); // get main box with items
     galleryBox.setAttribute('class', `gallery-box ${classesGalleryBox(a)}`); // add class to main box
-    let gallitems = galleryBox.getElementsByTagName('*'); // select ol child/items 
+    // let gallitems = galleryBox.getElementsByTagName('*'); // select ol child/items 
+    let gallitems = galleryBox.children; // select ol child/items 
 
 
     galleryBox.appendChild(itemsWrapper(gallitems, g_options));
