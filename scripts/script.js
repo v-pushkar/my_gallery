@@ -9,17 +9,18 @@ import itemsWrapper from '/scripts/modules/itemsWrapper.js';
 const g_options = {
     hover_animation: "scale", // - animation for hover-efect 
     structure: "otable", // "oneRow", "table"
-    struct_cols: "14-6-4-2", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
+    struct_cols: "14-8-8-2", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
     trackBox_teg: "div",
     item_wrappteg: "div",
     item_order: "equally", // "mix" "equally"
-    item_margin: 5, // "no" - parameter for margins bettwen items
-    item_form: "square", // "rectangle", "circle", "square" - parameter for item form
-    item_border: [{
-        color: "#777777",
-        windth: 10, // just number
-        radius: 20, // just number
-    }],
+    item_margin: 0, // "no" - parameter for margins bettwen items
+    item_form: "rectangle", // "rectangle", "circle", "square" - parameter for item form
+    item_border: "none"
+    // item_border: [{
+    //     color: "#777777",
+    //     windth: 10, // just number
+    //     radius: 20, // just number
+    // }],
 };
 
 document.onload = createGallery(g_options);
@@ -32,10 +33,7 @@ function createGallery(a) {
     galleryBox.setAttribute('class', `gallery-box ${classesGalleryBox(a)}`); // add class to main box
     // let gallitems = galleryBox.getElementsByTagName('*'); // select ol child/items 
     let gallitems = galleryBox.children; // select ol child/items 
-
-
     galleryBox.appendChild(itemsWrapper(gallitems, g_options));
-
     animationCorrect(gallitems, a.structure);
 };
 

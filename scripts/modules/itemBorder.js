@@ -1,5 +1,5 @@
 export default function itemBorder(a) {
-
+ if(a && a != "none"){
     let color = a[0].color;
     let windth = a[0].windth;
     let radius = a.radius;
@@ -9,6 +9,9 @@ export default function itemBorder(a) {
     var textnode = document.createTextNode(`.item-Wrapp {${classStyle}}`); // Create a text node
     node.appendChild(textnode);
     document.body.appendChild(node);
-
+ }    
+else {
+    return
+}
 
 }

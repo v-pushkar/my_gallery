@@ -1,20 +1,34 @@
-/* line 1, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 1, ../../../MyProgects/mygallery/styles/scss/itemNav.scss */
+.itemNaw {
+  position: absolute;
+  bottom: 5px;
+}
+
+/* line 5, ../../../MyProgects/mygallery/styles/scss/itemNav.scss */
+.itemNaw button {
+  border: none;
+  border-radius: 5px;
+  background-color: aliceblue;
+  padding: 3px;
+}
+
+/* line 3, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 body {
   margin: 0;
 }
 
-/* line 6, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 8, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-nav-wrapp {
   margin: 15px 0px;
   padding: 5px;
 }
 
-/* line 10, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 12, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-nav-wrapp .gallery-naw {
   text-align: center;
 }
 
-/* line 13, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 15, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-nav-wrapp .gallery-naw button {
   border: none;
   padding: 5px;
@@ -25,24 +39,24 @@ body {
   font-weight: bold;
 }
 
-/* line 25, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 27, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box {
   position: relative;
 }
 
-/* line 29, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 31, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box.one-row {
   width: 100%;
   overflow: hidden;
 }
 
-/* line 33, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 35, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box.one-row .track-box {
   width: 800%;
   overflow: hidden;
 }
 
-/* line 42, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 44, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box.view-table .track-box {
   flex-wrap: wrap;
   display: -webkit-flex;
@@ -51,14 +65,15 @@ body {
   justify-content: flex-start;
 }
 
-/* line 53, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 55, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .item-Wrapp {
+  position: relative;
   display: -webkit-inline-flex;
   display: inline-flex;
   justify-content: center;
 }
 
-/* line 58, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 61, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .item-Wrapp div,
 .gallery-wrapp .gallery-box .item-Wrapp ul,
 .gallery-wrapp .gallery-box .item-Wrapp li,
@@ -66,7 +81,7 @@ body {
   width: 100%;
 }
 
-/* line 66, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 69, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box {
   -webkit-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
@@ -74,24 +89,24 @@ body {
   overflow: hidden;
 }
 
-/* line 77, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 80, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box img {
   height: 100%;
 }
 
-/* line 82, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 85, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box:hover {
   z-index: 6 !important;
   opacity: 1 !important;
   transform: rotate(0deg);
 }
 
-/* line 88, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 91, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale {
   transition: all 0.5s;
 }
 
-/* line 92, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 95, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale:hover {
   -o-transform: scale(1.4);
   -ms-transform: scale(1.4);
@@ -101,7 +116,7 @@ body {
   opacity: 1;
 }
 
-/* line 106, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 109, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale.transl-to-right:hover {
   -o-transform: translateX(30%) scale(1.4);
   -ms-transform: translateX(30%) scale(1.4);
@@ -110,7 +125,7 @@ body {
   transform: translateX(30%) scale(1.4);
 }
 
-/* line 116, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 119, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale.transl-to-left:hover {
   -o-transform: translateX(-30%) scale(1.4);
   -ms-transform: translateX(-30%) scale(1.4);
@@ -119,24 +134,24 @@ body {
   transform: translateX(-30%) scale(1.4);
 }
 
-/* line 133, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 136, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 137, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 140, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* line 143, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 146, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 figure {
   margin: 0;
 }
 
-/* line 148, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 151, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .absolute-bg {
   position: absolute;
   top: 0;
@@ -150,7 +165,7 @@ figure {
   overflow: hidden;
 }
 
-/* line 164, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 167, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .fog {
   position: relative;
   height: 100vh;
@@ -158,7 +173,7 @@ figure {
   background-color: #000;
 }
 
-/* line 172, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 175, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .fog__container {
   position: absolute;
   height: 100%;
@@ -166,14 +181,14 @@ figure {
   overflow: hidden;
 }
 
-/* line 181, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 184, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .fog__img {
   position: absolute;
   height: 100vh;
   width: 300vw;
 }
 
-/* line 187, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 190, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .fog__img--first {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png") repeat-x;
   background-size: contain;
@@ -181,7 +196,7 @@ figure {
   animation: marquee 60s linear infinite;
 }
 
-/* line 194, C:/Work/GoogleDr/gallery/www/styles/scss/styles.scss */
+/* line 197, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .fog__img--second {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png") repeat-x;
   background-size: contain;
@@ -207,4 +222,4 @@ figure {
   }
 }
 
-/*# sourceMappingURL=../css/styles.map */
+/*# sourceMappingURL=styles.css.map */
