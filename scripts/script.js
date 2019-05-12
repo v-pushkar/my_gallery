@@ -14,7 +14,7 @@ const g_options = {
     item_wrappteg: "div",
     item_order: "equally", // "mix" "equally"
     item_margin: 0, // "no" - parameter for margins bettwen items
-    item_form: "rectangle", // "rectangle", "circle", "square" - parameter for item form
+    item_form: "square", // "rectangle", "circle", "square" - parameter for item form
     item_border: "none"
     // item_border: [{
     //     color: "#777777",
@@ -30,10 +30,12 @@ itemBorder(g_options.item_border);
 function createGallery(a) {
     // a - array with psrameters for slider:
     var galleryBox = document.querySelector('[data-name="gallery-box"]'); // get main box with items
+    let galleryWidth = galleryBox.offsetWidth;
+    console.log("gallert width :"+galleryWidth)
     galleryBox.setAttribute('class', `gallery-box ${classesGalleryBox(a)}`); // add class to main box
     // let gallitems = galleryBox.getElementsByTagName('*'); // select ol child/items 
     let gallitems = galleryBox.children; // select ol child/items 
-    galleryBox.appendChild(itemsWrapper(gallitems, g_options));
+    galleryBox.appendChild(itemsWrapper(gallitems, g_options, galleryWidth));
     animationCorrect(gallitems, a.structure);
 };
 

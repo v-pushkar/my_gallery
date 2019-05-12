@@ -1,7 +1,7 @@
 import animationClass from '/scripts/modules/animationClass.js';
 import itemBoxSize from '/scripts/modules/itemSize.js';
 
-export default function itemsWrapper(a, f) {
+export default function itemsWrapper(a, f, w) {
 
     // --- function for add multiattributes 
     Element.prototype.setAttributes = function (attrs) {
@@ -28,11 +28,12 @@ export default function itemsWrapper(a, f) {
         'id': 'track-box',
         'data-name': 'track-box'
     });
-
+    let itemSizeStyle = itemBoxSize(f, w);
+    console.log(`itemSizeStyle ${itemSizeStyle}`)
     for (let i = 0; i < gallItemsLeng; i++) {
         let itemWrapp = document.createElement(itemsWrapTeg);
         itemWrapp.setAttribute('class', `item-Wrapp item-id-${i} img-position-${i} img-box ${f.hover_animation ? animationClass(f.hover_animation) : ''}`); // add classes for new element - item of gallery
-        itemWrapp.setAttribute('style', itemBoxSize(f));
+        itemWrapp.setAttribute('style', itemSizeStyle);
         itemWrapp.appendChild(gallitems[0]);
         trackBox.appendChild(itemWrapp);
     }

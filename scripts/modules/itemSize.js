@@ -1,4 +1,4 @@
-export default function itemBoxSize(pr) { // calculation of actual size for item box (adaptive)
+export default function itemBoxSize(pr, w) { // calculation of actual size for item box (adaptive)
     const itemForm = pr.item_form;
     const itemSize = pr.struct_cols;
     const itemMargin = pr.item_margin;
@@ -9,6 +9,7 @@ export default function itemBoxSize(pr) { // calculation of actual size for item
     const sScreen = 400;
     const scrennStandarts = [xlScrenn, lScreen, mScreen, sScreen];
     const defSize = [8, 6, 3, 2]; // number of items per line for default
+    let gallWidth = w; // width of gallery wrapper box (gallery box)
 
 
     let a = (itemSize == "default" ? defSize : itemSize ? itemSize.split('-') : defSize); // determine the number of items per line
@@ -16,6 +17,9 @@ export default function itemBoxSize(pr) { // calculation of actual size for item
 
     function screenAdaptation(q) { // check screen width and select actual number of items per line from arrey 
         const screenWidth = window.innerWidth;
+        //const screenWidth = gallWidth;
+        console.log("gallWidth, screenWidth :"+gallWidth+" ; "+screenWidth);
+        console.log("typeOf gallWidth, screenWidth :"+typeof gallWidth+" ; "+typeof screenWidth);
         let s;
         if (screenWidth > q[0]) {
             s = 0;
@@ -53,7 +57,8 @@ export default function itemBoxSize(pr) { // calculation of actual size for item
         } else {
             s = 0;
         }
-        return `${itemsMargin(itemMargin)} ${itemsWidth(itemMargin, c)} ${itemsHeigth(itemMargin, itemWidth, s)}`;
+        console.log(`whot is C : ${c}`);
+        return `${itemsMargin(itemMargin)} ${itemsWidth(itemMargin, c)} ${itemsHeigth(itemMargin, gallWidth/c, s)}`;
     }
 
     function itemsMargin(a) {
@@ -62,23 +67,23 @@ export default function itemBoxSize(pr) { // calculation of actual size for item
         return mrg;
     }
 
-    function itemsWidth(a, b) { // returne style with item width. a - margin of item, number of items per row
-
+    function itemsWidth(a, b) { // returne style with item width. a - margin of item, b - number of items in (per) row
+        console.log(`whot is b : ${b}`)
         let width;
         let styleW;
         width = (100 / b).toFixed(4);
         itemWidth = width;
         styleW = `${pr.structure == "oneRow" ? 'width:' : 'flex-basis:' } calc( ${width}${pr.structure == "oneRow" ? "vw" : "%"}${a ? ` - ${a*2}px`: ""} );`;
-        // console.log("**** :" + styleW);
+        console.log("**** :" + styleW);
         return styleW;
     }
 
     function itemsHeigth(a, b, c) { // returne style with item height. a - margin of item, number of items per row
         let itemHeigth;
         if (itemForm == "rectangle") {
-            itemHeigth = `height: ${b * 0.7}vw`;
+            itemHeigth = `height: ${b * 0.7}px`;
         } else {
-            itemHeigth = `height: calc(${b}vw - ${a ? a*2:c}px)`;
+            itemHeigth = `height: calc(${b}px - ${a ? a*2:c}px)`;
         }
         return itemHeigth;
     }
