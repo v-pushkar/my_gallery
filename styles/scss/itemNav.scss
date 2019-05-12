@@ -1,11 +1,19 @@
-.itemNaw{
+.itemNaw {
+    display: none;
     position: absolute;
     bottom: 5px;
-    
-    button{
+
+    button {
         border: none;
         border-radius: 5px;
         background-color: aliceblue;
         padding: 3px;
     }
+}
+
+[data-hoverSkale="true"] {
+    .itemNaw {
+        display: block;
+    }
+
 }

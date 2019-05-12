@@ -5,8 +5,8 @@
 		"../scss/itemNav.scss"
 	],
 	"sourcesContent": [
-		".itemNaw{\r\n    position: absolute;\r\n    bottom: 5px;\r\n    \r\n    button{\r\n        border: none;\r\n        border-radius: 5px;\r\n        background-color: aliceblue;\r\n        padding: 3px;\r\n    }\r\n}"
+		".itemNaw {\r\n    display: none;\r\n    position: absolute;\r\n    bottom: 5px;\r\n\r\n    button {\r\n        border: none;\r\n        border-radius: 5px;\r\n        background-color: aliceblue;\r\n        padding: 3px;\r\n    }\r\n}\r\n\r\n[data-hoverSkale=\"true\"] {\r\n    .itemNaw {\r\n        display: block;\r\n    }\r\n\r\n}"
 	],
 	"names": [],
-	"mappings": ";AAAA,AAAA,QAAQ,CAAA;EACJ,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,GAAG;CAQd;;;AAVD,AAII,QAJI,CAIJ,MAAM,CAAA;EACF,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,GAAG;EAClB,gBAAgB,EAAE,SAAS;EAC3B,OAAO,EAAE,GAAG;CACf"
+	"mappings": ";AAAA,AAAA,QAAQ,CAAC;EACL,OAAO,EAAE,IAAI;EACb,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,GAAG;CAQd;;;AAXD,AAKI,QALI,CAKJ,MAAM,CAAC;EACH,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,GAAG;EAClB,gBAAgB,EAAE,SAAS;EAC3B,OAAO,EAAE,GAAG;CACf;;;CAGL,AAAA,AACI,eADH,CAAgB,MAAM,AAAtB,EACG,QAAQ,CAAC;EACL,OAAO,EAAE,KAAK;CACjB"
 }
