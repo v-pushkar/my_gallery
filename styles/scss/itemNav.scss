@@ -1,13 +1,28 @@
+button:focus {
+    outline: none;
+}
+
 .itemNaw {
-    display: none;
+    // display: none;
     position: absolute;
-    bottom: 5px;
+    top: 5px;
+    text-align: right;
 
     button {
+        margin: 10px;
         border: none;
         border-radius: 5px;
-        background-color: aliceblue;
-        padding: 3px;
+        background-color: #0404043d;
+        padding: 5px;
+        color: #b95700;
+        font-size: 25px;
+        transition: all 0.3s;
+        opacity: 0.8;
+
+        &:hover {
+            transform: scale(1.2);
+            opacity: 1;
+        }
     }
 }
 

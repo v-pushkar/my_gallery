@@ -15,12 +15,11 @@ const g_options = {
     item_order: "equally", // "mix" "equally"
     item_margin: 0, // "no" - parameter for margins bettwen items
     item_form: "square", // "rectangle", "circle", "square" - parameter for item form
-    item_border: "none"
-    // item_border: [{
-    //     color: "#777777",
-    //     windth: 10, // just number
-    //     radius: 20, // just number
-    // }],
+    item_border: [{     // can be "none" if border is not need;
+        color: "#777777",
+        windth: 10, // just number
+        radius: 20, // just number
+    }],
 };
 
 document.onload = createGallery(g_options);
@@ -43,14 +42,11 @@ function createGallery(a) {
 
     // var galleryBox = document.querySelector('[data-name="gallery-box"]')
     galleryBox.onmouseover = galleryBox.onmouseout = handler;
-
     function handler(event) {
-
         function str(el) {
             if (!el) return "null"
             return el.className || el.tagName;
         }
-
         event.type == 'mouseover' ? event.target.closest('.item-Wrapp').setAttribute("data-hoverSkale", "true") : event.target.closest('.item-Wrapp').setAttribute("data-hoverSkale", "false");
 
     }
