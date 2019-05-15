@@ -1,0 +1,45 @@
+/* line 1, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+button:focus {
+  outline: none;
+}
+
+/* line 5, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.itemNav-wrap {
+  position: absolute;
+  top: 5px;
+  text-align: right;
+}
+
+/* line 10, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.itemNav-wrap .itemNaw {
+  display: none;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+/* line 15, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.itemNav-wrap .itemNaw button {
+  margin: 10px;
+  border: none;
+  background-color: #0404043d;
+  padding: 5px;
+  color: #b95700;
+  font-size: 20px;
+  font-weight: 300;
+  transition: all 0.3s;
+  opacity: 0.6;
+}
+
+/* line 27, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.itemNav-wrap .itemNaw button:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* line 36, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+[data-hoverSkale="true"] .itemNaw {
+  display: block;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=itemNav.css.map */

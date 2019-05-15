@@ -1,0 +1,40 @@
+button:focus {
+    outline: none;
+}
+
+.itemNav-wrap {
+    position: absolute;
+    top: 5px;
+    text-align: right;
+
+    .itemNaw {
+        display: none;
+        opacity: 0;
+        transition: all 0.4s;
+
+        button {
+            margin: 10px;
+            border: none;
+            //   border-radius: 5px;
+            background-color: #0404043d;
+            padding: 5px;
+            color: #b95700;
+            font-size: 20px;
+            font-weight: 300;
+            transition: all 0.3s;
+            opacity: 0.6;
+
+            &:hover {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+[data-hoverSkale="true"] {
+    .itemNaw {
+        display: block;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,44 @@
+.viewer-wrapp {
+    z-index: 15;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000d1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
+
+    .preVieuBtn {
+        display: none;
+    }
+
+    .viewer {
+        max-width: 60%;
+        position: relative;
+
+        .close-viewuer {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            margin: 10px;
+            border: none;
+            background-color: #0404043d;
+            padding: 5px;
+            color: #b95700;
+            font-size: 20px;
+            font-weight: 300;
+            transition: all 0.3s;
+            opacity: 0.6;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+}

@@ -1,0 +1,10 @@
+/* line 1, ../../../MyProgects/mygallery/styles/scss/components/vieuver.scss */
+.vieuer {
+  position: absolute;
+  top: 50%;
+  margin: auto;
+  width: 80vw;
+  height: 60vw;
+}
+
+/*# sourceMappingURL=vieuver.css.map */

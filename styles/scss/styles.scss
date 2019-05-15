@@ -1,225 +1,226 @@
-@import "itemNav.scss";
+@import "components/itemNav.scss";
+@import "components/viewer.scss";
 
 body {
-  margin: 0
+    margin: 0
 }
 
 .gallery-wrapp {
-  .gallery-nav-wrapp {
-    margin: 15px 0px;
-    padding: 5px;
-
-    .gallery-naw {
-      text-align: center;
-
-      button {
-        border: none;
+    .gallery-nav-wrapp {
+        margin: 15px 0px;
         padding: 5px;
-        width: 100px;
-        text-transform: uppercase;
-        background-color: darkslategrey;
-        color: antiquewhite;
-        font-weight: bold;
-      }
-    }
-  }
 
-  .gallery-box {
-    position: relative;
+        .gallery-naw {
+            text-align: center;
 
-
-    &.one-row {
-      width: 100%;
-      overflow: hidden;
-
-      .track-box {
-        width: 800%;
-        overflow: hidden;
-
-      }
-
+            button {
+                border: none;
+                padding: 5px;
+                width: 100px;
+                text-transform: uppercase;
+                background-color: darkslategrey;
+                color: antiquewhite;
+                font-weight: bold;
+            }
+        }
     }
 
-    &.view-table {
-      .track-box {
-        flex-wrap: wrap;
-        display: -webkit-flex;
-        display: flex;
-        flex-direction: row;
+    .gallery-box {
+        position: relative;
 
-        justify-content: flex-start;
-      }
 
-    }
+        &.one-row {
+            width: 100%;
+            overflow: hidden;
 
-    .item-Wrapp {
-      position: relative;
-      display: -webkit-inline-flex;
-      display: inline-flex;
-      justify-content: center;
+            .track-box {
+                width: 800%;
+                overflow: hidden;
 
-      div,
-      ul,
-      li,
-      p {
-        width: 100%;
-      }
-    }
-
-    .img-box {
-      //border: 5px solid white;
-      // height: 15vw;
-      // width: 20vw;
-      -webkit-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
-      box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
-      // position: absolute;
-      // display: inline-block;
-      overflow: hidden;
-
-      img {
-        height: 100%;
-        // max-width: 6vw;
-      }
-
-      &:hover {
-        z-index: 6 !important;
-        opacity: 1 !important;
-        transform: rotate(0deg)
-      }
-
-      &.animation-scale {
-        // opacity: 0.6;
-        transition: all 0.5s;
-
-        &:hover {
-          -o-transform: scale(1.4);
-          -ms-transform: scale(1.4);
-          -moz-transform: scale(1.4);
-          -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-          opacity: 1;
-          // width: 30vw !important;
-          // flex-basis: initial !important;
-          // height: auto !important;
+            }
 
         }
 
-        &.transl-to-right {
-          &:hover {
-            -o-transform: translateX(30%) scale(1.4);
-            -ms-transform: translateX(30%) scale(1.4);
-            -moz-transform: translateX(30%) scale(1.4);
-            -webkit-transform: translateX(30%) scale(1.4);
-            transform: translateX(30%) scale(1.4);
-          }
+        &.view-table {
+            .track-box {
+                flex-wrap: wrap;
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: row;
+
+                justify-content: flex-start;
+            }
+
         }
 
-        &.transl-to-left {
-          &:hover {
-            -o-transform: translateX(-30%) scale(1.4);
-            -ms-transform: translateX(-30%) scale(1.4);
-            -moz-transform: translateX(-30%) scale(1.4);
-            -webkit-transform: translateX(-30%) scale(1.4);
-            transform: translateX(-30%) scale(1.4);
-          }
+        .item-Wrapp {
+            position: relative;
+            display: -webkit-inline-flex;
+            display: inline-flex;
+            justify-content: center;
+
+            div,
+            ul,
+            li,
+            p {
+                width: 100%;
+            }
         }
 
-      }
+        .img-box {
+            //border: 5px solid white;
+            // height: 15vw;
+            // width: 20vw;
+            -webkit-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
+            box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
+            // position: absolute;
+            // display: inline-block;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                // max-width: 6vw;
+            }
+
+            &:hover {
+                z-index: 6 !important;
+                opacity: 1 !important;
+                transform: rotate(0deg)
+            }
+
+            &.animation-scale {
+                // opacity: 0.6;
+                transition: all 0.5s;
+
+                &:hover {
+                    -o-transform: scale(1.4);
+                    -ms-transform: scale(1.4);
+                    -moz-transform: scale(1.4);
+                    -webkit-transform: scale(1.4);
+                    transform: scale(1.4);
+                    opacity: 1;
+                    // width: 30vw !important;
+                    // flex-basis: initial !important;
+                    // height: auto !important;
+
+                }
+
+                &.transl-to-right {
+                    &:hover {
+                        -o-transform: translateX(30%) scale(1.4);
+                        -ms-transform: translateX(30%) scale(1.4);
+                        -moz-transform: translateX(30%) scale(1.4);
+                        -webkit-transform: translateX(30%) scale(1.4);
+                        transform: translateX(30%) scale(1.4);
+                    }
+                }
+
+                &.transl-to-left {
+                    &:hover {
+                        -o-transform: translateX(-30%) scale(1.4);
+                        -ms-transform: translateX(-30%) scale(1.4);
+                        -moz-transform: translateX(-30%) scale(1.4);
+                        -webkit-transform: translateX(-30%) scale(1.4);
+                        transform: translateX(-30%) scale(1.4);
+                    }
+                }
+
+            }
 
 
+        }
     }
-  }
 }
 
 // Base
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 figure {
-  margin: 0;
+    margin: 0;
 }
 
 // Absolute Background
 .absolute-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-
-  height: 100%;
-  width: 100%;
-
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-
-// Fog
-.fog {
-  position: relative;
-
-  height: 100vh;
-  width: 100%;
-
-  background-color: #000;
-
-  &__container {
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 
     height: 100%;
     width: 100%;
 
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: hidden;
-  }
+}
 
-  &__img {
-    position: absolute;
+// Fog
+.fog {
+    position: relative;
 
     height: 100vh;
-    width: 300vw;
+    width: 100%;
 
-    &--first {
-      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png') repeat-x;
-      background-size: contain;
-      background-position: center;
-      animation: marquee 60s linear infinite;
+    background-color: #000;
+
+    &__container {
+        position: absolute;
+
+        height: 100%;
+        width: 100%;
+
+        overflow: hidden;
     }
 
-    &--second {
-      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png') repeat-x;
-      background-size: contain;
-      background-position: center;
-      animation: marquee 40s linear infinite;
+    &__img {
+        position: absolute;
+
+        height: 100vh;
+        width: 300vw;
+
+        &--first {
+            background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png') repeat-x;
+            background-size: contain;
+            background-position: center;
+            animation: marquee 60s linear infinite;
+        }
+
+        &--second {
+            background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png') repeat-x;
+            background-size: contain;
+            background-position: center;
+            animation: marquee 40s linear infinite;
+        }
     }
-  }
 }
 
 // Marquee
 @keyframes marquee {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
 
-  100% {
-    transform: translate3d(-200vw, 0, 0);
-  }
+    100% {
+        transform: translate3d(-200vw, 0, 0);
+    }
 }
 
 @keyframes itemAnimation {
-  0% {
-    transform: scale(1.0);
-  }
+    0% {
+        transform: scale(1.0);
+    }
 
-  100% {
-    transform: scale(2.0);
-  }
+    100% {
+        transform: scale(2.0);
+    }
 }
