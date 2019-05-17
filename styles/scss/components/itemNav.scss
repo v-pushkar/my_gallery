@@ -32,9 +32,12 @@ button:focus {
     }
 }
 
-[data-hoverSkale="true"] {
-    .itemNaw {
-        display: block;
-        opacity: 1;
+.item-Wrapp {
+    &:hover {
+
+        .itemNaw {
+            display: block;
+            opacity: 1;
+        }
     }
 }

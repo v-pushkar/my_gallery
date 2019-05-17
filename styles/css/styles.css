@@ -36,8 +36,8 @@ button:focus {
   opacity: 1;
 }
 
-/* line 36, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
-[data-hoverSkale="true"] .itemNaw {
+/* line 38, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.item-Wrapp:hover .itemNaw {
   display: block;
   opacity: 1;
 }
@@ -187,30 +187,30 @@ body {
 
 /* line 96, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale:hover {
-  -o-transform: scale(1.4);
-  -ms-transform: scale(1.4);
-  -moz-transform: scale(1.4);
-  -webkit-transform: scale(1.4);
-  transform: scale(1.4);
+  -o-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -webkit-transform: scale(1.7);
+  transform: scale(1.7);
   opacity: 1;
 }
 
 /* line 110, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale.transl-to-right:hover {
-  -o-transform: translateX(30%) scale(1.4);
-  -ms-transform: translateX(30%) scale(1.4);
-  -moz-transform: translateX(30%) scale(1.4);
-  -webkit-transform: translateX(30%) scale(1.4);
-  transform: translateX(30%) scale(1.4);
+  -o-transform: translateX(30%) scale(1.7);
+  -ms-transform: translateX(30%) scale(1.7);
+  -moz-transform: translateX(30%) scale(1.7);
+  -webkit-transform: translateX(30%) scale(1.7);
+  transform: translateX(30%) scale(1.7);
 }
 
 /* line 120, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale.transl-to-left:hover {
-  -o-transform: translateX(-30%) scale(1.4);
-  -ms-transform: translateX(-30%) scale(1.4);
-  -moz-transform: translateX(-30%) scale(1.4);
-  -webkit-transform: translateX(-30%) scale(1.4);
-  transform: translateX(-30%) scale(1.4);
+  -o-transform: translateX(-30%) scale(1.7);
+  -ms-transform: translateX(-30%) scale(1.7);
+  -moz-transform: translateX(-30%) scale(1.7);
+  -webkit-transform: translateX(-30%) scale(1.7);
+  transform: translateX(-30%) scale(1.7);
 }
 
 /* line 137, ../../../MyProgects/mygallery/styles/scss/styles.scss */

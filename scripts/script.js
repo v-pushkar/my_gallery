@@ -15,7 +15,7 @@ const g_options = {
   item_wrappteg: "div",
   item_order: "equally", // "mix" "equally"
   item_margin: 3, // "no" - parameter for margins bettwen items
-  item_form: "square", // "rectangle", "circle", "square" - parameter for item form
+  item_form: "circle", // "rectangle", "circle", "square" - parameter for item form
   item_border: [
     {
       // can be "none" if border is not need;
@@ -44,20 +44,20 @@ function createGallery(a) {
   // ----------------hover effect
 
   // var galleryBox = document.querySelector('[data-name="gallery-box"]')
-  galleryBox.onmouseover = galleryBox.onmouseout = handler;
-  function handler(event) {
-    function str(el) {
-      if (!el) return "null";
-      return el.className || el.tagName;
-    }
-    event.type == "mouseover"
-      ? event.target
-          .closest(".item-Wrapp")
-          .setAttribute("data-hoverSkale", "true")
-      : event.target
-          .closest(".item-Wrapp")
-          .setAttribute("data-hoverSkale", "false");
-  }
+  // galleryBox.onmouseover = galleryBox.onmouseout = handler;
+  // function handler(event) {
+  //   function str(el) {
+  //     if (!el) return "null";
+  //     return el.className || el.tagName;
+  //   }
+  //   event.type == "mouseover"
+  //     ? event.target
+  //         .closest(".item-Wrapp")
+  //         .setAttribute("data-hoverSkale", "true")
+  //     : event.target
+  //         .closest(".item-Wrapp")
+  //         .setAttribute("data-hoverSkale", "false");
+  // }
   // ---------------- end hover effect
 
   // ---------------- preVieuer start

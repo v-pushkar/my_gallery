@@ -36,8 +36,8 @@ button:focus {
   opacity: 1;
 }
 
-/* line 36, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
-[data-hoverSkale="true"] .itemNaw {
+/* line 38, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.item-Wrapp:hover .itemNaw {
   display: block;
   opacity: 1;
 }

@@ -94,11 +94,11 @@ body {
                 transition: all 0.5s;
 
                 &:hover {
-                    -o-transform: scale(1.4);
-                    -ms-transform: scale(1.4);
-                    -moz-transform: scale(1.4);
-                    -webkit-transform: scale(1.4);
-                    transform: scale(1.4);
+                    -o-transform: scale(1.7);
+                    -ms-transform: scale(1.7);
+                    -moz-transform: scale(1.7);
+                    -webkit-transform: scale(1.7);
+                    transform: scale(1.7);
                     opacity: 1;
                     // width: 30vw !important;
                     // flex-basis: initial !important;
@@ -108,21 +108,21 @@ body {
 
                 &.transl-to-right {
                     &:hover {
-                        -o-transform: translateX(30%) scale(1.4);
-                        -ms-transform: translateX(30%) scale(1.4);
-                        -moz-transform: translateX(30%) scale(1.4);
-                        -webkit-transform: translateX(30%) scale(1.4);
-                        transform: translateX(30%) scale(1.4);
+                        -o-transform: translateX(30%) scale(1.7);
+                        -ms-transform: translateX(30%) scale(1.7);
+                        -moz-transform: translateX(30%) scale(1.7);
+                        -webkit-transform: translateX(30%) scale(1.7);
+                        transform: translateX(30%) scale(1.7);
                     }
                 }
 
                 &.transl-to-left {
                     &:hover {
-                        -o-transform: translateX(-30%) scale(1.4);
-                        -ms-transform: translateX(-30%) scale(1.4);
-                        -moz-transform: translateX(-30%) scale(1.4);
-                        -webkit-transform: translateX(-30%) scale(1.4);
-                        transform: translateX(-30%) scale(1.4);
+                        -o-transform: translateX(-30%) scale(1.7);
+                        -ms-transform: translateX(-30%) scale(1.7);
+                        -moz-transform: translateX(-30%) scale(1.7);
+                        -webkit-transform: translateX(-30%) scale(1.7);
+                        transform: translateX(-30%) scale(1.7);
                     }
                 }
 
