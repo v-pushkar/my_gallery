@@ -7,8 +7,8 @@ export default function itemBoxSize(pr, w) {
   const xlScrenn = 1920;
   const lScreen = 1024;
   const mScreen = 800;
-  const sScreen = 400;
-  const scrennStandarts = [xlScrenn, lScreen, mScreen, sScreen];
+  const sScreen = 600;
+  const scrennStandarts = [lScreen, mScreen, sScreen];
   const defSize = [8, 6, 3, 2]; // number of items per line for default
   let gallWidth = w; // width of gallery wrapper box (gallery box)
 
@@ -30,11 +30,11 @@ export default function itemBoxSize(pr, w) {
     let s;
     if (screenWidth >= q[0]) {
       s = 0;
-    } else if (screenWidth < q[0] && screenWidth > q[1]) {
+    } else if (screenWidth < q[0] && screenWidth >= q[1]) {
       s = 1;
-    } else if (screenWidth < q[1] && screenWidth > q[2]) {
+    } else if (screenWidth < q[1] && screenWidth >= q[2]) {
       s = 2;
-    } else if (screenWidth < q[2] && screenWidth > q[3]) {
+    } else if (screenWidth < q[2]) {
       s = 3;
     }
     console.log(`s is = ${s}`);
