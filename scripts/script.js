@@ -11,7 +11,7 @@ import animationCorrect from "/scripts/modules/animationCorrect.js";
 const g_options = {
   hover_animation: "scale", // - animation for hover-efect
   structure: "table", // "oneRow", "table"
-  struct_cols: "3-6-3-2", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
+  struct_cols: "3-6-2-2", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
   trackBox_teg: "div",
   item_wrappteg: "div",
   item_order: "equally", // "mix" "equally"
