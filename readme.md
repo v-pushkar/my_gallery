@@ -8,24 +8,24 @@
 
 ### options for gallery:
 
-g_options = {
-hover_animation: "scale", // - animation for hover-efect
-structure: "table", // "oneRow", "table"
-struct_cols: "14-6-8-6", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
-trackBox_teg: "div",
-item_wrappteg: "div",
-item_order: "equally", // "mix" "equally"
-item_margin: 3, // "no" - parameter for margins bettwen items
-item_form: "circle", // "rectangle", "circle", "square" - parameter for item form
-item_border: [
-{
-// can be "none" if border is not need;
-color: "#D45801",
-windth: 3, // just number
-radius: 20 // just number
-}
-]
-};
+    g_options = {
+    hover_animation: "scale", // - animation for hover-efect
+    structure: "table", // "oneRow", "table"
+    struct_cols: "14-6-8-6", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
+    trackBox_teg: "div",
+    item_wrappteg: "div",
+    item_order: "equally", // "mix" "equally"
+    item_margin: 3, // "no" - parameter for margins bettwen items
+    item_form: "circle", // "rectangle", "circle", "square" - parameter for item form
+    item_border: [
+        {
+            // can be "none" if border is not need;
+            color: "#D45801",
+            windth: 3, // just number
+            radius: 20 // just number
+        }
+                ]
+    };
 
 ---
 
