@@ -1,20 +1,235 @@
-/* line 1, ../../../MyProgects/mygallery/styles/scss/styles.scss */
-body {
-  margin: 0;
+/* line 1, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+button:focus {
+  outline: none;
 }
 
-/* line 6, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 5, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.itemNav-wrap {
+  position: absolute;
+  top: 5px;
+  text-align: right;
+}
+
+/* line 10, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.itemNav-wrap .itemNaw {
+  display: none;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+/* line 15, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.itemNav-wrap .itemNaw button {
+  margin: 10px;
+  border: none;
+  background-color: #0404043d;
+  padding: 5px;
+  color: #b95700;
+  font-size: 1.5em;
+  font-weight: 300;
+  transition: all 0.3s;
+  opacity: 0.6;
+}
+
+/* line 27, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.itemNav-wrap .itemNaw button:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* line 38, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+.item-Wrapp:hover .itemNaw {
+  display: block;
+  opacity: 1;
+}
+
+/* line 1, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp {
+  z-index: 15;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000d1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+/* line 15, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp[data-opacity="opacityOn"] {
+  animation: opacityOn 0.5s;
+}
+
+/* line 20, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp[data-opacity="opacityOff"] {
+  animation: opacityOff 0.7s;
+}
+
+/* line 24, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp .preVieuBtn {
+  display: none;
+}
+
+/* line 28, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp .viewer {
+  max-width: 60%;
+  position: relative;
+}
+
+/* line 32, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp .viewer .btnInViewuer {
+  position: absolute;
+  margin: 10px;
+  border: none;
+  background-color: #0404043d;
+  padding: 5px;
+  color: #b95700;
+  font-size: 20px;
+  font-weight: 300;
+  transition: all 0.3s;
+  opacity: 0.6;
+}
+
+/* line 44, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp .viewer .btnInViewuer:hover {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* line 50, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp .viewer .close-viewuer {
+  top: 20px;
+  right: 20px;
+}
+
+/* line 55, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp .viewer .previous-item {
+  top: 50%;
+  left: 0;
+  font-size: 200%;
+}
+
+/* line 61, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp .viewer .next-item {
+  right: 0;
+  top: 50%;
+  font-size: 200%;
+}
+
+/* line 67, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
+.viewer-wrapp .viewer img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes opacityOn {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityOff {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 4, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: url("/img/wall2.jpg") center fixed;
+}
+
+/* line 11, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.main-nav {
+  position: fixed;
+  right: 50px;
+  z-index: 20;
+}
+
+/* line 16, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.main-nav ul {
+  list-style: none;
+}
+
+/* line 19, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.main-nav ul li {
+  border-radius: 2px;
+  display: inline-block;
+  list-style: none;
+  margin: 10px;
+  border: none;
+  background-color: #000000a8;
+  padding: 5px 10px;
+  color: #b95700;
+  font-size: 28px;
+  font-weight: 300;
+  transition: all 0.3s;
+  opacity: 0.8;
+}
+
+/* line 33, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.main-nav ul li:hover {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* line 38, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.main-nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 47, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.titles {
+  text-transform: uppercase;
+  padding: 20px;
+  text-align: center;
+  color: chocolate;
+  border-bottom: 2px solid chocolate;
+  margin-bottom: 20px;
+}
+
+/* line 55, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.titles article {
+  background-color: #000000a8;
+  width: 50%;
+  margin: auto;
+  border-radius: 2px;
+}
+
+/* line 61, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.titles article h1 {
+  margin-top: 0;
+}
+
+/* line 65, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.titles article hr {
+  border-color: chocolate;
+}
+
+/* line 74, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-nav-wrapp {
   margin: 15px 0px;
   padding: 5px;
 }
 
-/* line 10, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 78, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-nav-wrapp .gallery-naw {
   text-align: center;
 }
 
-/* line 13, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 81, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-nav-wrapp .gallery-naw button {
   border: none;
   padding: 5px;
@@ -25,24 +240,24 @@ body {
   font-weight: bold;
 }
 
-/* line 25, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 93, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box {
   position: relative;
 }
 
-/* line 29, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 97, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box.one-row {
   width: 100%;
   overflow: hidden;
 }
 
-/* line 33, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 101, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box.one-row .track-box {
   width: 800%;
   overflow: hidden;
 }
 
-/* line 42, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 110, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box.view-table .track-box {
   flex-wrap: wrap;
   display: -webkit-flex;
@@ -51,14 +266,15 @@ body {
   justify-content: flex-start;
 }
 
-/* line 53, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 121, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .item-Wrapp {
+  position: relative;
   display: -webkit-inline-flex;
   display: inline-flex;
   justify-content: center;
 }
 
-/* line 58, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 127, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .item-Wrapp div,
 .gallery-wrapp .gallery-box .item-Wrapp ul,
 .gallery-wrapp .gallery-box .item-Wrapp li,
@@ -66,7 +282,7 @@ body {
   width: 100%;
 }
 
-/* line 66, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 135, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box {
   -webkit-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
@@ -74,69 +290,69 @@ body {
   overflow: hidden;
 }
 
-/* line 77, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 146, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box img {
   height: 100%;
 }
 
-/* line 82, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 151, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box:hover {
   z-index: 6 !important;
   opacity: 1 !important;
   transform: rotate(0deg);
 }
 
-/* line 88, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 157, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale {
   transition: all 0.5s;
 }
 
-/* line 92, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 161, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale:hover {
-  -o-transform: scale(1.4);
-  -ms-transform: scale(1.4);
-  -moz-transform: scale(1.4);
-  -webkit-transform: scale(1.4);
-  transform: scale(1.4);
+  -o-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -webkit-transform: scale(1.7);
+  transform: scale(1.7);
   opacity: 1;
 }
 
-/* line 106, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 175, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale.transl-to-right:hover {
-  -o-transform: translateX(30%) scale(1.4);
-  -ms-transform: translateX(30%) scale(1.4);
-  -moz-transform: translateX(30%) scale(1.4);
-  -webkit-transform: translateX(30%) scale(1.4);
-  transform: translateX(30%) scale(1.4);
+  -o-transform: translateX(30%) scale(1.7);
+  -ms-transform: translateX(30%) scale(1.7);
+  -moz-transform: translateX(30%) scale(1.7);
+  -webkit-transform: translateX(30%) scale(1.7);
+  transform: translateX(30%) scale(1.7);
 }
 
-/* line 116, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 185, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .gallery-wrapp .gallery-box .img-box.animation-scale.transl-to-left:hover {
-  -o-transform: translateX(-30%) scale(1.4);
-  -ms-transform: translateX(-30%) scale(1.4);
-  -moz-transform: translateX(-30%) scale(1.4);
-  -webkit-transform: translateX(-30%) scale(1.4);
-  transform: translateX(-30%) scale(1.4);
+  -o-transform: translateX(-30%) scale(1.7);
+  -ms-transform: translateX(-30%) scale(1.7);
+  -moz-transform: translateX(-30%) scale(1.7);
+  -webkit-transform: translateX(-30%) scale(1.7);
+  transform: translateX(-30%) scale(1.7);
 }
 
-/* line 133, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 202, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 137, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 206, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* line 143, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 212, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 figure {
   margin: 0;
 }
 
-/* line 148, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 217, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .absolute-bg {
   position: absolute;
   top: 0;
@@ -150,7 +366,7 @@ figure {
   overflow: hidden;
 }
 
-/* line 164, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 233, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .fog {
   position: relative;
   height: 100vh;
@@ -158,7 +374,7 @@ figure {
   background-color: #000;
 }
 
-/* line 172, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 241, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .fog__container {
   position: absolute;
   height: 100%;
@@ -166,14 +382,14 @@ figure {
   overflow: hidden;
 }
 
-/* line 181, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 250, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .fog__img {
   position: absolute;
   height: 100vh;
   width: 300vw;
 }
 
-/* line 187, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 256, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .fog__img--first {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png") repeat-x;
   background-size: contain;
@@ -181,7 +397,7 @@ figure {
   animation: marquee 60s linear infinite;
 }
 
-/* line 194, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+/* line 263, ../../../MyProgects/mygallery/styles/scss/styles.scss */
 .fog__img--second {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png") repeat-x;
   background-size: contain;

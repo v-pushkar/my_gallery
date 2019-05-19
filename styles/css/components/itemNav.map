@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "itemNav.css",
+	"sources": [
+		"../../scss/components/itemNav.scss"
+	],
+	"sourcesContent": [
+		"button:focus {\r\n    outline: none;\r\n}\r\n\r\n.itemNav-wrap {\r\n    position: absolute;\r\n    top: 5px;\r\n    text-align: right;\r\n\r\n    .itemNaw {\r\n        display: none;\r\n        opacity: 0;\r\n        transition: all 0.4s;\r\n\r\n        button {\r\n            margin: 10px;\r\n            border: none;\r\n            //   border-radius: 5px;\r\n            background-color: #0404043d;\r\n            padding: 5px;\r\n            color: #b95700;\r\n            font-size: 1.5em;\r\n            font-weight: 300;\r\n            transition: all 0.3s;\r\n            opacity: 0.6;\r\n\r\n            &:hover {\r\n                transform: scale(1.2);\r\n                opacity: 1;\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n.item-Wrapp {\r\n    &:hover {\r\n\r\n        .itemNaw {\r\n            display: block;\r\n            opacity: 1;\r\n        }\r\n    }\r\n}"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,MAAM,AAAA,MAAM,CAAC;EACT,OAAO,EAAE,IAAI;CAChB;;;AAED,AAAA,aAAa,CAAC;EACV,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,GAAG;EACR,UAAU,EAAE,KAAK;CAyBpB;;;AA5BD,AAKI,aALS,CAKT,QAAQ,CAAC;EACL,OAAO,EAAE,IAAI;EACb,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,QAAQ;CAmBvB;;;AA3BL,AAUQ,aAVK,CAKT,QAAQ,CAKJ,MAAM,CAAC;EACH,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,IAAI;EAEZ,gBAAgB,EAAE,SAAS;EAC3B,OAAO,EAAE,GAAG;EACZ,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,QAAQ;EACpB,OAAO,EAAE,GAAG;CAMf;;;AA1BT,AAsBY,aAtBC,CAKT,QAAQ,CAKJ,MAAM,AAYD,MAAM,CAAC;EACJ,SAAS,EAAE,UAAU;EACrB,OAAO,EAAE,CAAC;CACb;;;AAKb,AAGQ,WAHG,AACN,MAAM,CAEH,QAAQ,CAAC;EACL,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,CAAC;CACb"
+}

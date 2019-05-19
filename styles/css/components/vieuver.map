@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "vieuver.css",
+	"sources": [
+		"../../scss/components/vieuver.scss"
+	],
+	"sourcesContent": [
+		".vieuer {\r\n    position: absolute;\r\n    top: 50%;\r\n    margin: auto;\r\n    width: 80vw;\r\n    height: 60vw;\r\n}"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,OAAO,CAAC;EACJ,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,GAAG;EACR,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACf"
+}

@@ -7,7 +7,7 @@ export default function animationCorrect(el) {
         let windWidth = window.innerWidth;
         let elWidth = xx[i].offsetWidth;
         if (ofsetElLeft < (xx[i].offsetWidth / 3)) {
-            xx[i].classList.add("transl-to-right")
+            xx[i].classList.add("transl-to-right sss")
         } else if (((elWidth + ofsetElLeft) <= innerWidth) && ((elWidth + ofsetElLeft) > (innerWidth - elWidth / 3))) {
             xx[i].classList.add(`transl-to-left`);
         }
