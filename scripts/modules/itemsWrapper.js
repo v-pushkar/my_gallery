@@ -42,6 +42,7 @@ export default function itemsWrapper(a, f, w) {
       }`
     ); // add classes for new element - item of gallery
     itemWrapp.setAttribute("style", itemSizeStyle);
+    itemWrapp.setAttribute("item-id", i);
     itemWrapp.appendChild(gallitems[0]);
     itemWrapp.appendChild(itemNavCrator());
     trackBox.appendChild(itemWrapp);

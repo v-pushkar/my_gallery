@@ -20,7 +20,7 @@ export default function preViewer(el, a) {
       }
     ]
   });
-  const btnRight = TagCreator({
+  const btnNext = TagCreator({
     tagName: "button",
     attributes: [
       {
@@ -40,13 +40,17 @@ export default function preViewer(el, a) {
       }
     ]
   });
+
   btnClose.addEventListener("click", closeViewer);
+  btnNext.addEventListener("click", nextSlide);
+  btnPrevious.addEventListener("click", previousSlide);
+
   el.setAttribute("data-click", "true");
   let parEl = el.closest(".item-Wrapp");
   let newParEl = parEl.cloneNode(true);
   newParEl.setAttribute("class", "viewer");
   newParEl.removeAttribute("style");
-  newParEl.appendChilds({ btnClose, btnRight, btnPrevious });
+  newParEl.appendChilds({ btnClose, btnNext, btnPrevious });
 
   let viewerWrap = TagCreator({
     tagName: "div",
@@ -72,6 +76,49 @@ export default function preViewer(el, a) {
     }, 600);
   }
   //------------
+
+  function nextSlide() {
+    let slids = document.getElementsByClassName("item-Wrapp");
+    let itVieuver = this.closest(".viewer");
+    let itId = parseInt(itVieuver.getAttribute("item-id"));
+    itVieuver.setAttribute("item-id", itId == slids.length - 1 ? 0 : itId + 1);
+    itVieuver
+      .getElementsByClassName("img-item")[0]
+      .setAttribute("src", nextSc(slids, itId));
+
+    function nextSc(a, b) {
+      let len = a.length - 1;
+      let newId = b !== len ? b + 1 : 0;
+      console.log(`a.length : ${a.length}`);
+      console.log(`newId : ${newId}`);
+      let newEl = a[newId].getElementsByClassName("img-item");
+      console.log(`newEl : ${newEl}`);
+      let newSrc = newEl[0].getAttribute("src");
+      return newSrc;
+    }
+  }
+
+  function previousSlide() {
+    let slids = document.getElementsByClassName("item-Wrapp");
+    let itVieuver = this.closest(".viewer");
+    let itId = parseInt(itVieuver.getAttribute("item-id"));
+    console.log(`itId : ${itId}`);
+    itVieuver.setAttribute("item-id", itId == 0 ? slids.length - 1 : itId - 1);
+    itVieuver
+      .getElementsByClassName("img-item")[0]
+      .setAttribute("src", previousSc(slids, itId));
+
+    function previousSc(a, b) {
+      let len = a.length - 1;
+      let newId = b == 0 ? len : b - 1;
+      // console.log(`a.length : ${a.length}`);
+      console.log(`newId : ${newId}`);
+      let newEl = a[newId].getElementsByClassName("img-item");
+      // console.log(`newEl : ${newEl}`);
+      let newSrc = newEl[0].getAttribute("src");
+      return newSrc;
+    }
+  }
 
   return;
 }

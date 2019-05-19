@@ -20,13 +20,13 @@ export default function itemBoxSize(pr, w) {
     // check screen width and select actual number of items per line from arrey
     const screenWidth = window.innerWidth;
     //const screenWidth = gallWidth;
-    console.log("gallWidth, screenWidth :" + gallWidth + " ; " + screenWidth);
-    console.log(
-      "typeOf gallWidth, screenWidth :" +
-        typeof gallWidth +
-        " ; " +
-        typeof screenWidth
-    );
+    //console.log("gallWidth, screenWidth :" + gallWidth + " ; " + screenWidth);
+    // console.log(
+    //   "typeOf gallWidth, screenWidth :" +
+    //     typeof gallWidth +
+    //     " ; " +
+    //     typeof screenWidth
+    // );
     let s;
     if (screenWidth >= q[0]) {
       s = 0;
@@ -37,7 +37,7 @@ export default function itemBoxSize(pr, w) {
     } else if (screenWidth < q[2]) {
       s = 3;
     }
-    console.log(`s is = ${s}`);
+    // console.log(`s is = ${s}`);
     return s;
   }
 
@@ -68,7 +68,7 @@ export default function itemBoxSize(pr, w) {
     } else {
       s = 0;
     }
-    console.log(`whot is C : ${c}`);
+    // console.log(`whot is C : ${c}`);
     return `${itemsMargin(itemMargin)} ${itemsWidth(
       itemMargin,
       c
@@ -83,7 +83,7 @@ export default function itemBoxSize(pr, w) {
 
   function itemsWidth(a, b) {
     // returne style with item width. a - margin of item, b - number of items in (per) row
-    console.log(`whot is b : ${b}`);
+    // console.log(`whot is b : ${b}`);
     let width;
     let styleW;
     width = (100 / b).toFixed(4);
@@ -93,7 +93,7 @@ export default function itemBoxSize(pr, w) {
     } calc( ${width}${pr.structure == "oneRow" ? "vw" : "%"}${
       a ? ` - ${a * 2}px` : ""
     } );`;
-    console.log("**** :" + styleW);
+    // console.log("**** :" + styleW);
     return styleW;
   }
 
