@@ -1,0 +1,90 @@
+/* line 2, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 6, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* line 12, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+figure {
+  margin: 0;
+}
+
+/* line 17, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+.absolute-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* line 33, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+.fog {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+/* line 40, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+.fog__container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 49, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+.fog__img {
+  position: absolute;
+  height: 100vh;
+  width: 300vw;
+}
+
+/* line 55, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+.fog__img--first {
+  background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png") repeat-x;
+  background-size: contain;
+  background-position: center;
+  animation: marquee 60s linear infinite;
+}
+
+/* line 62, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+.fog__img--second {
+  background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png") repeat-x;
+  background-size: contain;
+  background-position: center;
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-200vw, 0, 0);
+  }
+}
+
+@keyframes itemAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+/*# sourceMappingURL=fog.css.map */

@@ -31,7 +31,7 @@
 
 /* line 28, ../../../MyProgects/mygallery/styles/scss/components/viewer.scss */
 .viewer-wrapp .viewer {
-  max-width: 60%;
+  width: 60%;
   position: relative;
 }
 

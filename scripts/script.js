@@ -1,10 +1,8 @@
 import classesGalleryBox from "/scripts/modules/galleryClasses.js";
-import animationClass from "/scripts/modules/animationClass.js";
-import itemBoxSize from "/scripts/modules/itemSize.js";
 import itemBorder from "/scripts/modules/itemBorder.js";
-import oneRow from "/scripts/modules/oneRow.js";
 import itemsWrapper from "/scripts/modules/itemsWrapper.js";
 import preViewer from "/scripts/modules/itemPreviewer.js";
+import fog from "/scripts/modules/fog.js";
 import animationCorrect from "/scripts/modules/animationCorrect.js";
 
 // options for view gallery
@@ -17,6 +15,7 @@ const g_options = {
   item_order: "equally", // "mix" "equally"
   item_margin: 3, // "no" - parameter for margins bettwen items
   item_form: "rectangle", // "rectangle", "circle", "square" - parameter for item form
+  fog: true,
   item_border: [
     {
       // can be "none" if border is not need;
@@ -27,11 +26,8 @@ const g_options = {
   ]
 };
 
-document.onload = createGallery(g_options);
-
-itemBorder(g_options.item_border);
-
-function createGallery(a) {
+// -----
+Element.prototype.createGallery = function(a) {
   // a - array with psrameters for slider:
   var galleryBox = document.querySelector('[data-name="gallery-box"]'); // get main box with items
   let galleryWidth = galleryBox.offsetWidth;
@@ -41,40 +37,21 @@ function createGallery(a) {
   let gallitems = galleryBox.children; // select oll child/items
   galleryBox.appendChild(itemsWrapper(gallitems, g_options, galleryWidth));
   animationCorrect(gallitems, a.structure, galleryWidth);
-
-  // ----------------hover effect
-
-  // var galleryBox = document.querySelector('[data-name="gallery-box"]')
-  // galleryBox.onmouseover = galleryBox.onmouseout = handler;
-  // function handler(event) {
-  //   function str(el) {
-  //     if (!el) return "null";
-  //     return el.className || el.tagName;
-  //   }
-  //   event.type == "mouseover"
-  //     ? event.target
-  //         .closest(".item-Wrapp")
-  //         .setAttribute("data-hoverSkale", "true")
-  //     : event.target
-  //         .closest(".item-Wrapp")
-  //         .setAttribute("data-hoverSkale", "false");
-  // }
-  // ---------------- end hover effect
-
+  itemBorder(g_options.item_border);
   // ---------------- preVieuer start
   let preVieuerBtn = document.getElementsByClassName("preVieuBtn");
 
-  var myFunction = function() {
+  let openViewer = function() {
     preViewer(this, galleryBox);
   };
 
   for (var i = 0; i < preVieuerBtn.length; i++) {
-    preVieuerBtn[i].addEventListener("click", myFunction, false);
+    preVieuerBtn[i].addEventListener("click", openViewer, false);
   }
 
-  preVieuerBtn.onclick = function() {
-    alert("It was clic: " + this);
-  };
-
-  // ---------------- preVieuer start
-}
+  if (a.fog) {
+    galleryBox.appendChild(fog());
+  }
+};
+let elG = document.getElementById("gallery-box");
+elG.createGallery(g_options);
