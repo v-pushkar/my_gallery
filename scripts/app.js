@@ -25,16 +25,26 @@ const g_options = {
     }
   ]
 };
-
+Element.prototype.addClasses = function() {
+  let ar = this;
+  for (let idx in ar) {
+    ar[idx].classList.add("item-content");
+  }
+};
 // -----
 Element.prototype.createGallery = function(a) {
   // a - array with options for slider:
   let galleryBox = document.querySelector('[data-name="gallery-box"]'); // get main box with items
+
   let galleryWidth = galleryBox.offsetWidth;
-  console.log("gallert width :" + galleryWidth);
+
   galleryBox.setAttribute("class", `gallery-box ${classesGalleryBox(a)}`); // add class to main box
-  // let gallitems = galleryBox.getElementsByTagName('*'); // select ol child/items
+
   let gallitems = galleryBox.children; // select oll child/items
+  for (let i = 0; i < gallitems.length; i++) {
+    // add new class to item element
+    gallitems[i].classList.add("item-content");
+  }
   galleryBox.appendChild(itemsWrapper(gallitems, g_options, galleryWidth));
   animationCorrect(gallitems, a.structure, galleryWidth);
   itemBorder(g_options.item_border);
@@ -44,7 +54,7 @@ Element.prototype.createGallery = function(a) {
     preViewer(this, galleryBox);
   };
 
-  for (var i = 0; i < preVieuerBtn.length; i++) {
+  for (let i = 0; i < preVieuerBtn.length; i++) {
     preVieuerBtn[i].addEventListener("click", openViewer, false);
   }
 

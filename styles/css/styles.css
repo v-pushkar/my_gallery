@@ -372,7 +372,7 @@ body {
 }
 
 /* line 136, ../../../MyProgects/mygallery/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box .img-box {
+.gallery-wrapp .gallery-box .item-Wrapp {
   -webkit-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 17px 39px 9px rgba(0, 0, 0, 0.75);
@@ -380,24 +380,25 @@ body {
 }
 
 /* line 147, ../../../MyProgects/mygallery/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box .img-box img {
+.gallery-wrapp .gallery-box .item-Wrapp img {
   height: 100%;
+  min-width: 100%;
 }
 
-/* line 152, ../../../MyProgects/mygallery/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box .img-box:hover {
+/* line 153, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.gallery-wrapp .gallery-box .item-Wrapp:hover {
   z-index: 6 !important;
   opacity: 1 !important;
   transform: rotate(0deg);
 }
 
-/* line 158, ../../../MyProgects/mygallery/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box .img-box.animation-scale {
+/* line 159, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.gallery-wrapp .gallery-box .item-Wrapp.animation-scale {
   transition: all 0.5s;
 }
 
-/* line 162, ../../../MyProgects/mygallery/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box .img-box.animation-scale:hover {
+/* line 163, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.gallery-wrapp .gallery-box .item-Wrapp.animation-scale:hover {
   -o-transform: scale(1.7);
   -ms-transform: scale(1.7);
   -moz-transform: scale(1.7);
@@ -406,8 +407,8 @@ body {
   opacity: 1;
 }
 
-/* line 176, ../../../MyProgects/mygallery/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box .img-box.animation-scale.transl-to-right:hover {
+/* line 177, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.gallery-wrapp .gallery-box .item-Wrapp.animation-scale.transl-to-right:hover {
   -o-transform: translateX(30%) scale(1.7);
   -ms-transform: translateX(30%) scale(1.7);
   -moz-transform: translateX(30%) scale(1.7);
@@ -415,8 +416,8 @@ body {
   transform: translateX(30%) scale(1.7);
 }
 
-/* line 186, ../../../MyProgects/mygallery/styles/scss/styles.scss */
-.gallery-wrapp .gallery-box .img-box.animation-scale.transl-to-left:hover {
+/* line 187, ../../../MyProgects/mygallery/styles/scss/styles.scss */
+.gallery-wrapp .gallery-box .item-Wrapp.animation-scale.transl-to-left:hover {
   -o-transform: translateX(-30%) scale(1.7);
   -ms-transform: translateX(-30%) scale(1.7);
   -moz-transform: translateX(-30%) scale(1.7);
