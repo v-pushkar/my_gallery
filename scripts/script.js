@@ -9,13 +9,13 @@ import animationCorrect from "/scripts/modules/animationCorrect.js";
 const g_options = {
   hover_animation: "scale", // - animation for hover-efect
   structure: "table", // "oneRow", "table"
-  struct_cols: "3-6-2-2", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
+  struct_cols: "8-6-2-2", // from 1 - 12, "default" - numbers of items in one row foe diferent screens (fron big screens to mobile). If "default" - 8, 6, 3, 2.
   trackBox_teg: "div",
   item_wrappteg: "div",
   item_order: "equally", // "mix" "equally"
   item_margin: 3, // "no" - parameter for margins bettwen items
   item_form: "rectangle", // "rectangle", "circle", "square" - parameter for item form
-  fog: true,
+  fog: false,
   item_border: [
     {
       // can be "none" if border is not need;
@@ -28,8 +28,8 @@ const g_options = {
 
 // -----
 Element.prototype.createGallery = function(a) {
-  // a - array with psrameters for slider:
-  var galleryBox = document.querySelector('[data-name="gallery-box"]'); // get main box with items
+  // a - array with options for slider:
+  let galleryBox = document.querySelector('[data-name="gallery-box"]'); // get main box with items
   let galleryWidth = galleryBox.offsetWidth;
   console.log("gallert width :" + galleryWidth);
   galleryBox.setAttribute("class", `gallery-box ${classesGalleryBox(a)}`); // add class to main box
@@ -40,7 +40,6 @@ Element.prototype.createGallery = function(a) {
   itemBorder(g_options.item_border);
   // ---------------- preVieuer start
   let preVieuerBtn = document.getElementsByClassName("preVieuBtn");
-
   let openViewer = function() {
     preViewer(this, galleryBox);
   };
@@ -53,5 +52,6 @@ Element.prototype.createGallery = function(a) {
     galleryBox.appendChild(fog());
   }
 };
+
 let elG = document.getElementById("gallery-box");
 elG.createGallery(g_options);

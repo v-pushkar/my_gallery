@@ -86,10 +86,10 @@ export default function itemBoxSize(pr, w) {
     // console.log(`whot is b : ${b}`);
     let width;
     let styleW;
-    width = (100 / b).toFixed(4);
+    width = (100 / b).toFixed(2);
     itemWidth = width;
     styleW = `${
-      pr.structure == "oneRow" ? "width:" : "flex-basis:"
+      pr.structure === "oneRow" ? "width:" : "flex-basis:"
     } calc( ${width}${pr.structure == "oneRow" ? "vw" : "%"}${
       a ? ` - ${a * 2}px` : ""
     } );`;
@@ -101,10 +101,11 @@ export default function itemBoxSize(pr, w) {
     // returne style with item height. a - margin of item, number of items per row
     let itemHeigth;
     if (itemForm == "rectangle") {
-      itemHeigth = `height: ${b * 0.7}px`;
+      itemHeigth = `height: ${(b * 0.7).toFixed(2)}px`;
     } else {
-      itemHeigth = `height: calc(${b}px - ${a ? a * 2 : c}px)`;
+      itemHeigth = `height: calc(${b.toFixed(2)}px - ${a ? a * 2 : c}px)`;
     }
+    console.log("item haight : " + itemHeigth);
     return itemHeigth;
   }
 }
