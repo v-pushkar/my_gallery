@@ -1,9 +1,9 @@
-import classesGalleryBox from "/scripts/modules/galleryClasses.js";
-import itemBorder from "/scripts/modules/itemBorder.js";
-import itemsWrapper from "/scripts/modules/itemsWrapper.js";
-import preViewer from "/scripts/modules/itemPreviewer.js";
-import fog from "/scripts/modules/fog.js";
-import animationCorrect from "/scripts/modules/animationCorrect.js";
+import classesGalleryBox from "/app/scripts/modules/galleryClasses.js";
+import itemBorder from "/app/scripts/modules/itemBorder.js";
+import itemsWrapper from "/app/scripts/modules/itemsWrapper.js";
+import preViewer from "/app/scripts/modules/itemPreviewer.js";
+import fog from "/app/scripts/modules/fog.js";
+import animationCorrect from "/app/scripts/modules/animationCorrect.js";
 
 // options for view gallery
 const g_options = {

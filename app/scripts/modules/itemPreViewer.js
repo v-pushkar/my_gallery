@@ -1,4 +1,4 @@
-import TagCreator from "/scripts/helpFunctions/tagCreator.js";
+import TagCreator from "/app/scripts/helpFunctions/tagCreator.js";
 
 export default function preViewer(el, a) {
   //el - clickeded element (vieuver on button); a - gallery parent element

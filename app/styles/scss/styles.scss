@@ -3,9 +3,11 @@
 @import "components/fog.scss";
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
-    background: url("/img/wall2.jpg") center fixed;
+    background: url("../../img/wall2.jpg") center fixed;
 
 }
 

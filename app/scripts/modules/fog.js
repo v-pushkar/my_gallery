@@ -1,4 +1,4 @@
-import TagCreator from "/scripts/helpFunctions/tagCreator.js";
+import TagCreator from "/app/scripts/helpFunctions/tagCreator.js";
 
 export default function fog() {
   let fog = TagCreator({

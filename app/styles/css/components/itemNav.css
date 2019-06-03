@@ -1,23 +1,23 @@
-/* line 1, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+/* line 1, ../../../MyProgects/mygallery/app/styles/scss/components/itemNav.scss */
 button:focus {
   outline: none;
 }
 
-/* line 5, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+/* line 5, ../../../MyProgects/mygallery/app/styles/scss/components/itemNav.scss */
 .itemNav-wrap {
   position: absolute;
   top: 5px;
   text-align: right;
 }
 
-/* line 10, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+/* line 10, ../../../MyProgects/mygallery/app/styles/scss/components/itemNav.scss */
 .itemNav-wrap .itemNaw {
   display: none;
   opacity: 0;
   transition: all 0.4s;
 }
 
-/* line 15, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+/* line 15, ../../../MyProgects/mygallery/app/styles/scss/components/itemNav.scss */
 .itemNav-wrap .itemNaw button {
   margin: 10px;
   border: none;
@@ -30,13 +30,13 @@ button:focus {
   opacity: 0.6;
 }
 
-/* line 27, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+/* line 27, ../../../MyProgects/mygallery/app/styles/scss/components/itemNav.scss */
 .itemNav-wrap .itemNaw button:hover {
   transform: scale(1.2);
   opacity: 1;
 }
 
-/* line 38, ../../../MyProgects/mygallery/styles/scss/components/itemNav.scss */
+/* line 38, ../../../MyProgects/mygallery/app/styles/scss/components/itemNav.scss */
 .item-Wrapp:hover .itemNaw {
   display: block;
   opacity: 1;

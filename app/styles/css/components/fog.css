@@ -1,21 +1,21 @@
-/* line 2, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+/* line 2, ../../../MyProgects/mygallery/app/styles/scss/components/fog.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 6, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+/* line 6, ../../../MyProgects/mygallery/app/styles/scss/components/fog.scss */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* line 12, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+/* line 12, ../../../MyProgects/mygallery/app/styles/scss/components/fog.scss */
 figure {
   margin: 0;
 }
 
-/* line 17, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+/* line 17, ../../../MyProgects/mygallery/app/styles/scss/components/fog.scss */
 .absolute-bg {
   position: absolute;
   top: 0;
@@ -29,7 +29,7 @@ figure {
   overflow: hidden;
 }
 
-/* line 33, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+/* line 33, ../../../MyProgects/mygallery/app/styles/scss/components/fog.scss */
 .fog {
   position: fixed;
   height: 100vh;
@@ -38,7 +38,7 @@ figure {
   z-index: -1;
 }
 
-/* line 40, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+/* line 40, ../../../MyProgects/mygallery/app/styles/scss/components/fog.scss */
 .fog__container {
   position: absolute;
   height: 100%;
@@ -46,14 +46,14 @@ figure {
   overflow: hidden;
 }
 
-/* line 49, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+/* line 49, ../../../MyProgects/mygallery/app/styles/scss/components/fog.scss */
 .fog__img {
   position: absolute;
   height: 100vh;
   width: 300vw;
 }
 
-/* line 55, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+/* line 55, ../../../MyProgects/mygallery/app/styles/scss/components/fog.scss */
 .fog__img--first {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png") repeat-x;
   background-size: contain;
@@ -61,7 +61,7 @@ figure {
   animation: marquee 60s linear infinite;
 }
 
-/* line 62, ../../../MyProgects/mygallery/styles/scss/components/fog.scss */
+/* line 62, ../../../MyProgects/mygallery/app/styles/scss/components/fog.scss */
 .fog__img--second {
   background: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png") repeat-x;
   background-size: contain;

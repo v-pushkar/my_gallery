@@ -1,7 +1,7 @@
-import animationClass from "/scripts/modules/animationClass.js";
-import itemBoxSize from "/scripts/modules/itemSize.js";
-import itemNavCrator from "/scripts/modules/itemNavigationCreator.js";
-import multiAttr from "/scripts/helpFunctions/multiAttributes.js";
+import animationClass from "/app/scripts/modules/animationClass.js";
+import itemBoxSize from "/app/scripts/modules/itemSize.js";
+import itemNavCrator from "/app/scripts/modules/itemNavigationCreator.js";
+import multiAttr from "/app/scripts/helpFunctions/multiAttributes.js";
 
 export default function itemsWrapper(a, f, w) {
   let gallitems = a;
